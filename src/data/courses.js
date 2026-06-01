@@ -1,117 +1,71 @@
 export const coursesData = [
   {
     id: 1,
-    title: 'Aula 1',
-    subtitle: 'Introdução a Python',
+    title: 'Fundamentos de Python',
+    subtitle: 'Variáveis, tipos e primeiros comandos',
     status: 'ongoing',
     videos: [
-      { title: 'O que é Python?', url: '#' },
-      { title: 'Instalação e Configuração', url: '#' },
-      { title: 'Seu Primeiro Programa', url: '#' }
+      { title: 'O que é Python?', url: 'https://www.youtube.com/results?search_query=o+que+%C3%A9+python' },
+      { title: 'Seu primeiro programa em Python', url: 'https://www.youtube.com/results?search_query=primeiro+programa+python' }
     ],
     exercises: [
-      { title: 'Plataforma Exercism', url: '#' },
-      { title: 'HackerRank - Basics', url: '#' },
-      { title: 'CodeWars', url: '#' }
+      { title: 'HackerRank - Python Basics', url: 'https://www.hackerrank.com/domains/python' },
+      { title: 'Exercism - Iniciante', url: 'https://exercism.org/tracks/python' }
     ],
     texts: [
-      { title: 'Guia de Instalação', url: '#' },
-      { title: 'Conceitos Básicos', url: '#' }
+      { title: 'Guia de instalação e primeiros passos', url: '#' },
+      { title: 'Material básico em PDF', url: '#' }
     ],
     notebookUrl: '#'
   },
   {
     id: 2,
-    title: 'Aula 2',
-    subtitle: 'Variáveis e Tipos de Dados',
+    title: 'Controle de Fluxo',
+    subtitle: 'Condicionais e repetições',
     status: 'planned',
     videos: [
-      { title: 'O que são variáveis?', url: '#' },
-      { title: 'Tipos de dados em Python', url: '#' },
-      { title: 'Operações com dados', url: '#' }
+      { title: 'If, Else e Elif em Python', url: 'https://www.youtube.com/results?search_query=if+else+elif+python' },
+      { title: 'Loops For e While', url: 'https://www.youtube.com/results?search_query=for+while+python' }
     ],
     exercises: [
-      { title: 'Exercism - Variables', url: '#' },
-      { title: 'HackerRank - Data Types', url: '#' }
+      { title: 'CodeWars - Loops', url: 'https://www.codewars.com/' },
+      { title: 'Beecrowd - Problem Solving', url: 'https://www.beecrowd.com.br/judge/pt/problems/all' }
     ],
     texts: [
-      { title: 'Guia de Variáveis', url: '#' }
+      { title: 'PDF de estruturas de controle', url: '#' }
     ],
     notebookUrl: '#'
   },
   {
     id: 3,
-    title: 'Aula 3',
-    subtitle: 'Estruturas de Controle',
+    title: 'Funções e Modularização',
+    subtitle: 'Funções, parâmetros e retorno',
     status: 'planned',
     videos: [
-      { title: 'If, Else e Elif', url: '#' },
-      { title: 'Loops - For e While', url: '#' },
-      { title: 'Break e Continue', url: '#' }
+      { title: 'Criando funções em Python', url: 'https://www.youtube.com/results?search_query=fun%C3%A7%C3%B5es+python' }
     ],
     exercises: [
-      { title: 'Exercism - Control Flow', url: '#' },
-      { title: 'CodeWars - Loops', url: '#' }
+      { title: 'HackerRank - Functions', url: 'https://www.hackerrank.com/domains/python/py-introduction' }
     ],
     texts: [
-      { title: 'Documentação oficial', url: '#' }
+      { title: 'Manual de funções em PDF', url: '#' }
     ],
     notebookUrl: '#'
   },
   {
     id: 4,
-    title: 'Aula 4',
-    subtitle: 'Funções',
+    title: 'Estruturas de Dados',
+    subtitle: 'Listas, dicionários e conjuntos',
     status: 'planned',
     videos: [
-      { title: 'Definindo funções', url: '#' },
-      { title: 'Parâmetros e retornos', url: '#' },
-      { title: 'Escopo de variáveis', url: '#' }
+      { title: 'Listas e Tuplas', url: 'https://www.youtube.com/results?search_query=list+tuples+python' },
+      { title: 'Dicionários e conjuntos', url: 'https://www.youtube.com/results?search_query=dicion%C3%A1rios+conjuntos+python' }
     ],
     exercises: [
-      { title: 'Exercism - Functions', url: '#' },
-      { title: 'HackerRank - Functions', url: '#' }
+      { title: 'Exercism - Data Structures', url: 'https://exercism.org/tracks/python/exercises' }
     ],
     texts: [
-      { title: 'Guia de Funções', url: '#' }
-    ],
-    notebookUrl: '#'
-  },
-  {
-    id: 5,
-    title: 'Aula 5',
-    subtitle: 'Estruturas de Dados',
-    status: 'planned',
-    videos: [
-      { title: 'Listas e Tuplas', url: '#' },
-      { title: 'Dicionários', url: '#' },
-      { title: 'Conjuntos (Sets)', url: '#' }
-    ],
-    exercises: [
-      { title: 'Exercism - Lists', url: '#' },
-      { title: 'CodeWars - Collections', url: '#' }
-    ],
-    texts: [
-      { title: 'Estruturas Explicadas', url: '#' }
-    ],
-    notebookUrl: '#'
-  },
-  {
-    id: 6,
-    title: 'Aula 6',
-    subtitle: 'Programação Orientada a Objetos',
-    status: 'planned',
-    videos: [
-      { title: 'Classes e Objetos', url: '#' },
-      { title: 'Atributos e Métodos', url: '#' },
-      { title: 'Herança e Polimorfismo', url: '#' }
-    ],
-    exercises: [
-      { title: 'Exercism - OOP', url: '#' },
-      { title: 'HackerRank - OOP', url: '#' }
-    ],
-    texts: [
-      { title: 'Conceitos de OOP', url: '#' }
+      { title: 'PDF de coleções em Python', url: '#' }
     ],
     notebookUrl: '#'
   }
