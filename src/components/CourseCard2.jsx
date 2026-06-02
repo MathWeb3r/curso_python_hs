@@ -1,4 +1,4 @@
-import Collapsible from 'react-collapsible'
+import React from 'react';
 
 function CourseCard({ course }) {
   const getStatusClass = (status) => {
@@ -19,14 +19,20 @@ function CourseCard({ course }) {
     return labels[status] || status
   }
 
+  const [open, setOpen] = React.useState(false);
+
   return (
-    <div className="course-card">
-      <div className="course-header">
+    <div className="course-card-col">
+      <div className="course-title-row">
         <h3>{course.title}</h3>
-        <p className="course-number">{course.subtitle}</p>
+        <button type="button" className="btn" onClick={() => setOpen(!open)}>
+          {open ? 'Fechar' : 'Abrir'}
+        </button>
       </div>
 
-      <div className="course-content">
+
+      {open && (
+        <div className="course-content">
         {/* Videos */}
         <div className="content-section">
           <div className="content-title">
@@ -88,9 +94,13 @@ function CourseCard({ course }) {
         <span className={`status-badge ${getStatusClass(course.status)}`}>
           {getStatusLabel(course.status)}
         </span>
+
       </div>
+      )}
+       
     </div>
   )
+
 }
 
-export default CourseCard
+export default CourseCard;

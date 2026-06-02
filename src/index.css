@@ -62,7 +62,14 @@ header p {
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.courses-grid-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  gap: 18px;
   margin-bottom: 32px;
 }
 
@@ -83,6 +90,7 @@ header p {
 }
 
 .course-header,
+.course-title-row,
 .resource-card h3 {
   background: #0f172a;
   padding: 20px;
@@ -90,9 +98,37 @@ header p {
 }
 
 .course-header h3,
+.course-title-row h3,
 .resource-card h3 {
   color: #f8fafc;
   margin: 0;
+}
+
+.course-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.course-title-row h3 {
+  margin: 0;
+}
+
+.btn {
+  background: #0ea5e9;
+  color: #0f172a;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #0284c7;
 }
 
 .course-number {

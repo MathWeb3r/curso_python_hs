@@ -1,8 +1,8 @@
 export const coursesData = [
   {
     id: 1,
-    title: 'Fundamentos de Python',
-    subtitle: 'Variáveis, tipos e primeiros comandos',
+    title: 'Ambiente de Desenvolvimento',
+    subtitle: "Instalando Python e IDE's",
     status: 'ongoing',
     videos: [
       { title: 'O que é Python?', url: 'https://www.youtube.com/results?search_query=o+que+%C3%A9+python' },
@@ -20,19 +20,20 @@ export const coursesData = [
   },
   {
     id: 2,
-    title: 'Controle de Fluxo',
-    subtitle: 'Condicionais e repetições',
-    status: 'planned',
+    title: 'Fundamentos de Python',
+    subtitle: 'Variáveis, tipos e primeiros comandos',
+    status: 'ongoing',
     videos: [
-      { title: 'If, Else e Elif em Python', url: 'https://www.youtube.com/results?search_query=if+else+elif+python' },
-      { title: 'Loops For e While', url: 'https://www.youtube.com/results?search_query=for+while+python' }
+      { title: 'O que é Python?', url: 'https://www.youtube.com/results?search_query=o+que+%C3%A9+python' },
+      { title: 'Seu primeiro programa em Python', url: 'https://www.youtube.com/results?search_query=primeiro+programa+python' }
     ],
     exercises: [
-      { title: 'CodeWars - Loops', url: 'https://www.codewars.com/' },
-      { title: 'Beecrowd - Problem Solving', url: 'https://www.beecrowd.com.br/judge/pt/problems/all' }
+      { title: 'HackerRank - Python Basics', url: 'https://www.hackerrank.com/domains/python' },
+      { title: 'Exercism - Iniciante', url: 'https://exercism.org/tracks/python' }
     ],
     texts: [
-      { title: 'PDF de estruturas de controle', url: '#' }
+      { title: 'Guia de instalação e primeiros passos', url: '#' },
+      { title: 'Material básico em PDF', url: '#' }
     ],
     notebookUrl: '#'
   },

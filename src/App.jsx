@@ -1,7 +1,10 @@
 import Header from './components/Header'
 import CourseCard from './components/CourseCard'
+import CourseCard2 from './components/CourseCard2'
 import Footer from './components/Footer'
 import { coursesData } from './data/courses'
+import Collapsible from 'react-collapsible'
+
 
 const suggestedContent = {
   videos: [
@@ -40,10 +43,17 @@ function App() {
           </p>
         </section>
 
+        {/* Cards das aulas/topicos
+        <div className=".courses-grid-col">
+          {coursesData.map((course) => (
+            <CourseCard2 course={course}/>
+          ))}
+        </div> */}
+
         {/* Cards das aulas/topicos */}
         <div className="courses-grid">
           {coursesData.map((course) => (
-            <CourseCard key={course.id} course={course} />
+            <CourseCard course={course}/>
           ))}
         </div>
 
