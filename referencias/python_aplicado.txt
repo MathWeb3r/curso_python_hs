@@ -1,0 +1,5 @@
+https://pubs.aip.org/aapt/ajp/article-abstract/91/1/7/2872636/Resource-Letter-CP-3-Computational-physics?redirectedFrom=PDF;
+https://www.insightlab.ufc.br/principais-plataformas-para-estudo-de-data-science/;
+https://belglas.com/wp-content/uploads/2018/03/cpwp.pdf;
+https://ppgf.uern.br/files/python-uern-2016-01.pdf;
+https://jakevdp.github.io/PythonDataScienceHandbook/;
