@@ -7,7 +7,14 @@ slug: "hello-world"
 # Bem-vindo ao fascinante universo da computação!
 
 ## Uma pequena motivação (Nota do autor)
-Depois de alguns semestre como estudante de física, percebi que havia algo de estranho em como o programação era apresentado para nós. Durante as disciplinas de programação, aqueles que já tinham algum conhecimento em programação conseguiam aprender a aplica-los, enquanto aqueles que não tinham ficavam cade vez mais confusos com aquilo. O que leva muitos a se sentirem incapazes ou intimidados quando o assunto é computação. Nosso objetivo aqui é mudar essa realidade! Se você chegou até aqui e não tem nenhuma experiência prévia com programação, não se preocupe, a ideia aqui é proporcionar um guia desmistificado, partindo do zero, com o básico da programação e suas aplicações à Física (nao gostei desse ultimo periodo). 
+Depois de alguns semestre como estudante de física, percebi que havia algo de estranho em como o programação era apresentado para nós. Durante as disciplinas de programação, aqueles que já tinham algum conhecimento em programação conseguiam aprender a aplica-los, enquanto aqueles que não tinham ficavam cade vez mais confusos com aquilo. O que leva muitos a se sentirem incapazes ou intimidados quando o assunto é computação. Nosso objetivo aqui é mudar essa realidade! Se você chegou até aqui e não tem nenhuma experiência prévia com programação, não se preocupe, a ideia aqui é proporcionar um guia desmistificado, partindo do zero, com o básico da programação e suas aplicações à Física (nao gostei desse ultimo periodo). Espero que possam desfrutar desse percurso tanto quanto eu.
+
+> "Não existe uma estrada real para a ciência, e
+somente aqueles que não temem a fadiga de galgar suas
+trilhas escarpadas têm chance de atingir seus cumes
+luminosos." - Karl Marx, O Capital.
+
+> "Paciencia você 
 
 ## Pra quem são essas aulas?
 Para aquelas pessoas que a curiosidade é maior do que qualquer ferramenta. Não é preciso ter nenhum conhecimento prévio em programação, mas é preciso ter vontade de aprender. Como cientistas (ou futuros cientistas!) somos movidos pelo desejo inquieto de entender como as coisas funcionam, de conseguir enxergar os padrões escondidos por trás do caos.
@@ -31,7 +38,9 @@ Temos como objetivo apresentar esse universo, com base em três pilares fundamen
 
 # Nossa linguagem de programação: Python!
 
-Ainda não temos uma linguagem de programação definida, mas a nossa vai ser Python! Mas por quê Python? Ela é ao mesmo tempo simples e poderosa. Fácil para Iniciantes e boa para experientes. No vasto mapa do mundo do desenvolvimento, existem muitas linguagens, mas o Python se tornou a língua da ciência moderna
+> "So it's beguin " 
+
+A linguagem de programação que vamos utilizar neste curso é o Python. Mas por quê Python? Ela é ao mesmo tempo simples e poderosa. Fácil para Iniciantes e boa para experientes. No vasto mapa do mundo do desenvolvimento, existem muitas linguagens, mas o Python se tornou a língua da ciência moderna
 
 - **Simplicidade e Clareza**: A escrita é limpa, muito próxima da forma como explicamos um problema a outro ser humano.
 - **Poder Científico**: É a ferramenta preferida em lugares como a NASA e o CERN para processar dados de telescópios e aceleradores de partículas.
@@ -189,3 +198,4 @@ Na terceira linha temos o statement `a = 10 + 5`. Este _statement_ é o que cham
 ```bash
 15
 ``` 
+
