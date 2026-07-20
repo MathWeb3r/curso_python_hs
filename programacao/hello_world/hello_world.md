@@ -51,18 +51,31 @@ O site oficial do [Python](https://www.python.org) detecta automaticamente o sis
 
 sla
 
-Após instalar abra o terminal do sistema operacional (No windows: <kbd>Ctrl</kbd> + <kbd>R</kbd> e digite 'cmd'. No linux <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> ) e digite python3. Se tudo der certo você verá algo parecido com isso:
+Após instalar abra o terminal do sistema operacional (No windows: <kbd>Ctrl</kbd> + <kbd>R</kbd> e digite 'cmd'. No linux <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> ) e digite `python3` (ou `python`, dependendo da sua instalação).
 
+```bash
+$ python3 --version
 ```
-Python 3.10.11 (main, ...)
-[GCC ...] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>>
+> O símbolo `$` é apenas para indicar que o comando deve ser digitado no terminal, não precisa digitá-lo. No seu computador deve aparecer algo como: `c:\Users\computador>` ou `computador@linux:~$`.
+
+Se a instalção der certo, você verá algo parecido com isso 
+
+```bash
+Python 3.12.3
 ```
+
+> O número da versão pode ser diferente, depende de qual versão do python você instalou. Inclusive, quando estiver lendo isso, já deve existir uma versão mais nova. Recomendo que instale a versão mais recente disponível
 
 ## Brincando um pouco com Python (REPL)
 
-O Python possui um modo chamado REPL (Read-Eval-Print Loop), onde ele lê o que você escreve, executa e te responde na hora. Digite python no seu terminal e você verá o prompt `>>>`.
+O Python possui um modo chamado REPL (Read-Eval-Print Loop), que é este que nós iniciamos após digitar `python3` (ou `python`) no terminal. Nele, o Python lê o que você escreve, executa e te responde na hora. Você verá o prompt `>>>`, que indica que o Python está esperando um comando.
+
+```
+$ python3
+Python 3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+```
 
 Nosso primeiro contato, digite o comando abaixo, aperte <kbd>Enter</kbd> e veja a máquina te saudar:
 
@@ -71,19 +84,25 @@ Nosso primeiro contato, digite o comando abaixo, aperte <kbd>Enter</kbd> e veja 
 Olá, Mundo!
 ```
 
-O `print()` é uma função básica que exibe texto ou resultados na tela. Repare que a coisa que está entre parenteses está entre aspas duplas ``" "``, isso é sinal de que essa coisa tem formato de texto (Você verá que isso define um tipo chamado `string`, mas não se preocupe com os nomes agora)
+O `print()` é uma função básica que exibe texto ou resultados na tela. Repare que a coisa que está entre parênteses está escrita entre aspas duplas ``" "``, isso é sinal de que essa coisa tem formato de texto (Você verá que isso define um tipo chamado `string`, mas não se preocupe com os nomes agora)
 
-> Existe uma superstição que se o seu primeiro comando não for `print("Olá, Mundo!")`, você terá má sorte na sua jornada de aprendizado e coisas terríveis aconterão! Não sou muito supersticioso, mas eu não brincaria com isso...  
+> Dizem por aí que existe uma superstição que se o seu primeiro comando não for `print("Olá, Mundo!")`, você terá má sorte na sua jornada de aprendizado e coisas terríveis aconterão! Não sou muito supersticioso, mas eu não brincaria com isso...  
 
 Vamos fazer algumas operações matemáticas, tente fazer isso no seu terminal:
 
-```
+```python
 >>> 2 + 2
 4
+```
+```python
 >>> 3 * 2
 6
+```
+```python
 >>> 10 / 3
 3.3333333333333335
+```
+```python
 >>> 10 / 0
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -95,17 +114,78 @@ Aqui temos a soma (escrita com `+`), multiplicação (escrita com `*`), divisão
 Repare que o ultimo comando, tentando realizar uma divisão por zero, não deu certo, ele gerou um erro. Não se preocupe, isso é normal! Mas repare que a mensagem de erro nos diz exatamente o que aconteceu: `ZeroDivisionError: division by zero`. Isso é uma das belezas do Python, ele é bem descritivo. Sempre que um erro acontecer, leia a mensagem de erro e tente entender o que aconteceu. 
 
 
+Para encerrar o REPL, digite `exit()`:
+
+```python
+>>>exit()
+$
+```
 
 ## Nosso primeiro programa
 
-Um arquivo de python é apenas um arquivo de texto contendo código de python. Dito isso, vamos criar um arquivo chamado hello_world.py e colocar o seguinte código dentro dele:
+Um arquivo de python é apenas um arquivo de texto contendo código de python. Dito isso, vamos criar um arquivo chamado `hello_world.py` e colocar o seguinte código dentro dele. O tipo de arquivo `.py` é um tipo de arquivo de texto comum, e pode ser aberto com o Bloco de Notas (no Windows) ou qualquer editor de texto (e.g. Nano, no Linux). Escreva o texto abaixo dentro do arquivo:
 
 ```python
 # Aqui vamos imprimir uma mensagem na tela
-print("Meu primeito script em python :)")
+print("Meu primeito script :)")
 
 # Uma conta simples
-a = 2 + 3
+a = 10 + 5
 print(a)
-
 ```
+
+Agora, abra o terminal na mesma pasta que você salvou o arquivo. Pode ser clicando com o botão direito do mouse na pasta e selecionando "Abrir terminal" (no Windows), ou pelo terminal usando o comando `cd` para navegar até a pasta onde você salvou o arquivo.
+
+```bash
+$ cd nome_da_pasta
+```
+
+Então digite o comando abaixo:
+
+```bash
+$ python3 hello_world.py
+```
+
+E você verá como resposta:
+
+```bash
+Meu primeito script :)
+15
+```
+
+Parabéns, você acabou de executar o seu primeiro programa em Python! Ao digitar `python3 nome_do_arquivo.py` você está pedindo ao interpretador do Python para ler e executar o código que está dentro do arquivo. 
+
+## O que está acontecendo aqui?
+(Mostrar o numero de linhas no site)
+
+```python
+# Aqui vamos imprimir uma mensagem na tela
+print("Meu primeito script :)")
+
+# Uma conta simples
+a = 10 + 5
+print(a)
+```
+
+Python é uma linguagem interpretada, o que significa que o interpretador (o programa que executa o código) lê o código linha por linha e executa cada linha. Mas amplamente, é uma linguagem imperativa, isto é, você diz ao computador o que fazer, passo a passo. Cada passo é uma instrução, ou, _statement_.
+
+No nosso programa temos 3 statements:
+- `print("Meu primeito script :)")`
+- `a = 10 + 5`
+- `print(a)`
+
+As linhas que começam com `#` são comentários, e são ignorados pelo interpretador. São muito úteis, especialmente quando estamos desenvolvendo programas mais longos, pois ajudam a explicar o que o código faz.
+
+Na primeira linha, temos o statement `print("Meu primeito script :)")`. Este statement usa a função `print()`. A função `print()` é uma função embutida do Python (_Built-in function_), ou seja, ela já vem instalada. No futuro nós criaremos nossas próprias funções.
+
+```bash
+Meu primeito script :)
+```
+
+>Repare que a função `print()` cria uma nova linha no terminal toda vez que é chamada. Este é o comportamente padrão mas pode ser alterado.
+
+Na terceira linha temos o statement `a = 10 + 5`. Este _statement_ é o que chamamos de atribuição (_assignment_ em inglês). Basicamente estamos criando uma variável chamada `a` e atribuindo o valor `10 + 5` a ela. O Python vai calcular `10 + 5`, obter o resultado `15` e armazenar esse valor na variável `a`. Em breve vamos discutir melhor o que são variáveis e como elas funcionam. Então quando chamamos a função `print(a)` na quarta linha, o Python vai buscar o valor armazenado na variável `a` e imprimir na tela.
+
+```bash
+15
+``` 
