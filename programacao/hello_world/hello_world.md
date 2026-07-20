@@ -75,14 +75,26 @@ O `print()` é uma função básica que exibe texto ou resultados na tela. Repar
 
 > Existe uma superstição que se o seu primeiro comando não for `print("Olá, Mundo!")`, você terá má sorte na sua jornada de aprendizado e coisas terríveis aconterão! Não sou muito supersticioso, mas eu não brincaria com isso...  
 
-Explorando Números e Lógica. Diferente da matemática pura, no computador os números têm "tipos" e precisões finitas.
+Vamos fazer algumas operações matemáticas, tente fazer isso no seu terminal:
 
-- **Inteiros (int)**: Números como 1, 10 ou -5
-- **Reais (float)**: Números com casas decimais, como 9.81 ou 3.14159
-- **Lógicos (bool)**: O mundo binário de True (Verdadeiro) ou False (Falso)
-.
-Tente fazer algumas operações simples como 10 + 15, 5 ** 2 (para potências) ou 10 / 3 e observe como ele se comporta
-. Se cometer um erro, não se preocupe: mensagens de erro são apenas diagnósticos para te ajudar a ajustar o rumo, algo que faz parte da vida de qualquer desenvolvedor
+```
+>>> 2 + 2
+4
+>>> 3 * 2
+6
+>>> 10 / 3
+3.3333333333333335
+>>> 10 / 0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+```
+
+Aqui temos a soma (escrita com `+`), multiplicação (escrita com `*`), divisão (escrita com `/`), em breve veremos outras operações. 
+
+Repare que o ultimo comando, tentando realizar uma divisão por zero, não deu certo, ele gerou um erro. Não se preocupe, isso é normal! Mas repare que a mensagem de erro nos diz exatamente o que aconteceu: `ZeroDivisionError: division by zero`. Isso é uma das belezas do Python, ele é bem descritivo. Sempre que um erro acontecer, leia a mensagem de erro e tente entender o que aconteceu. 
+
+
 
 ## Nosso primeiro programa
 
@@ -95,6 +107,5 @@ print("Meu primeito script em python :)")
 # Uma conta simples
 a = 2 + 3
 print(a)
-
 
 ```
