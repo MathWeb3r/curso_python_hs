@@ -14,7 +14,7 @@ somente aqueles que não temem a fadiga de galgar suas
 trilhas escarpadas têm chance de atingir seus cumes
 luminosos." - Karl Marx.
 
-> "A melhor professora, a falha é" - Mestre Yoda. 
+> "alguma outra coisa legal" - algum autor 
 
 ## Pra quem são essas aulas?
 Para aquelas pessoas que a curiosidade é maior do que qualquer ferramenta. Não é preciso ter nenhum conhecimento prévio em programação, mas é preciso ter vontade de aprender. Como cientistas (ou futuros cientistas!) somos movidos pelo desejo inquieto de entender como as coisas funcionam, de conseguir enxergar os padrões escondidos por trás do caos.

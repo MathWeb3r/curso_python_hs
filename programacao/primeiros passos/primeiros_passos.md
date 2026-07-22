@@ -1,9 +1,10 @@
-<!-- 
+<!--
 A ideia desse artigo é apresentar as partes elementares da programação em python. Apesar da linguagem ser python, gostaria de algumas noções do funcionamento dessas coisas no contexto da computação em geral. Estou falando de variáveis, funções, estruturas de controle, etc..  
 
 Em específico aqui vamos falar sobre numeros, tipos e variáveis.
 Não sei em quanto detalhes vou entrar, mas vou tentar manter um nível de profundidade bom para que vocês entendam de fato o que está acontecendo. Em futuras revisões eu posso detalhar mais algumas coisas ou enxugar um pouco.
 -->
+
 
 # Números, Tipos, Expressões e Mais!
 
@@ -130,11 +131,11 @@ Em Python, textos são chamados de **strings** e são denotados por `str`. As st
 
 Embora "2" seja um caractere que pode ser representado por um número inteiro, ele é uma string porque está entre aspas. 
 
-> ℹ️ Isso pode ser uma fonte de confusão para iniciantes, principalpente ao usar a função `input()`, que veremos mais adiante. Nem sempre os tipos são explicitos, por exemplo ao escrever o comando `print("2")` e `print(2)`, ambos serão impressos da mesma forma, ainda que sejam dois tipos diferentes. Conforme você praticar essas confusões desaparecerão ;)
+> ℹ️ Isso pode ser uma fonte de confusão para iniciantes, principalpente ao usar a função `input()`, que veremos mais adiante. Nem sempre os tipos são explicitos, por exemplo ao escrever o comando `print("2")` e `print(2)`, ambos serão impressos da mesma forma, ainda que sejam dois tipos diferentes. Mas conforme você praticar essas confusões desaparecerão ;)
 
 Python é codificado em **unicode**, que é um padrão de codificação de caracteres que permite representar praticamente todos os caracteres de todos os idiomas do mundo (inclusive emojis! 😂). 
 
-Também existem sequências especiais de caracteres, chamadas de **sequências de escape**, que permitem representar caracteres especiais em strings, eles são processados quando a string é exibida (por exemplo com a função `print()`). Por exemplo, `"\n"` representa quebra de linha. 
+Também existem sequências especiais de caracteres, chamadas de **sequências de escape**, que permitem representar caracteres especiais em strings, eles são processados quando a string é exibida (por exemplo com a função `print()`). Por exemplo, umas das mais comuns é a `"\n"`, que representa quebra de linha. 
 
 ```python
 >>>print("Mas não há sentido em chorar sobre cada erro.\nVocê simplesmente continua tentando até acabar o bolo.\n🎂")
@@ -143,4 +144,26 @@ Você simplesmente continua tentando até acabar o bolo.
 🎂
 ```
 
-<!--Trecho do poema da GlaD0s, do porta. Gosto muito. Talvez faça mais referencias ao bolo :D-->
+<!--Trecho do poema da GlaD0s, do portal. Gosto muito. Talvez faça mais referencias ao bolo :D-->
+
+> :bulb: Existem outras sequências de escape. Para ver outras sequências de escape, basta digitar `help(str)` no modo REPL.
+
+Podemos converter outros tipos de dados em **strings** usando a função `str()`. Mas o contrário nem sempre é verdade, não são todos os caracteres de uma string podem ser convertidos para outros tipos de dados. Por exemplo, se uma string contém letras, ela não pode ser convertida para um número inteiro ou float. Veja o exemplo:
+
+```python
+>>> str(10) # convertendo um inteiro para string
+'10'
+>>> int('20') # convertendo uma string para inteiro
+20
+>>> float('3.14') # convertendo uma string para float
+3.14
+>>> int('10a') # convertendo uma string para inteiro
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '10a'
+```
+
+> :bulb: A ultima instrução gera um erro, pois uma string que contém letras não pode ser convertida para um número inteiro. Agora repare na maneira como este erro esta escrito. É bem descritivo e nos diz o que aconteceu e onde aconteceu. Isso é chamado de **stack trace**. A primeira linha diz que o erro aconteceu na linha 1 (é a única). A ultima linha diz o tipo do erro (neste caso erro de valor, `ValueError`) e descreve o que aconteceu. `invalid literal for int() with base 10: '10a'`. Durante a sua jornada de aprendizado, você verá mensagem como esta o tempo todo :)
+>
+> "A maior das professoras, a falha é." - Mestre Yoda.
+
