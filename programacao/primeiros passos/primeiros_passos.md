@@ -32,7 +32,7 @@ Isso significa que o valor do número 1 é 1. Isso é tão óbvio :)! Vamos tent
 10.5
 ```
 
-O valor de 10 é 10. Programar é tão fácil! >u<
+O valor de 10.5 é 10.5. Programar é tão fácil! >u<
 
 Estes são os dois tipos principais de números em python. Assim como na Matemática, números como 1, 2, 200, -10 são chamados de **inteiros**, denotados por `int`. Números como 1.5, 2.3, 3.14159, -10.5, e outros números com decimais, são chamados de **ponto flutuante**, denotados por `float`. 
 
@@ -163,7 +163,68 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: '10a'
 ```
 
-> :bulb: A ultima instrução gera um erro, pois uma string que contém letras não pode ser convertida para um número inteiro. Agora repare na maneira como este erro esta escrito. É bem descritivo e nos diz o que aconteceu e onde aconteceu. Isso é chamado de **stack trace**. A primeira linha diz que o erro aconteceu na linha 1 (é a única). A ultima linha diz o tipo do erro (neste caso erro de valor, `ValueError`) e descreve o que aconteceu. `invalid literal for int() with base 10: '10a'`. Durante a sua jornada de aprendizado, você verá mensagem como esta o tempo todo :)
+> :bulb: A ultima instrução gera um erro, pois uma string que contém letras não pode ser convertida para um número inteiro. Agora repare na maneira como este erro esta escrito. É bem descritivo e nos diz o que aconteceu e onde aconteceu. Isso é chamado de **stack trace**. A primeira linha diz que o erro aconteceu na linha 1 (é a única), e o nome do arquivo (neste caso `<stdin>`, pois estamos no REPL). A ultima linha diz o tipo do erro (neste caso erro de valor, `ValueError`) e descreve o que aconteceu. `invalid literal for int() with base 10: '10a'`. Durante a sua jornada de aprendizado, você verá mensagem como esta o tempo todo :)
 >
 > "A maior das professoras, a falha é." - Mestre Yoda.
+
+## Variáveis 
+
+Em qualquer linguagem de programação, precisamos de **variáveis** para armazenar dados. As **variáveis** são como caixas que podem armazenar diferentes tipos de dados. Por exemplo, podemos criar uma variável para armazenar um número inteiro, outra para armazenar um número float, outra para armazenar um booleano e outra para armazenar uma string. Veja o exemplo:
+
+```python
+>>>gravidade = 9.8 # Um float
+```
+
+O que está acontecendo aqui? Estamos **atribuindo** o valor `9.8` à variável `gravidade`. Podemos ler essa instrução como
+"gravidade recebe 9.8". Como a atribuição é feita com o operador `=`, muitos iniciantes costumas interpretar essa instrução `gravidade = 9.8` como "garvidade é igual a 9.8", o que é um erro comum, mas pode levar a confusões posteriores. 
+
+Ainda no mesmo terminal, se você digitar apenas o nome da variável `gravidade`, verá que o Python retornará o valor que está armazenado nela. Por exemplo:
+
+```python
+>>> gravidade
+9.8
+```
+
+> Em algumas outras linguagens, é preciso definir uma variável antes de atribuir um valor a ela, dizendo qual será o tipo de dado que ela irá armazenar. Em python isso não é necessário, basta atribuir um valor a uma variável e ela será criada automaticamente.
+
+Podemos verificar o tipo desta variável usando a função `type()`:
+
+```python
+>>> type(gravidade)
+<class 'float'>
+```
+
+Ao mesmo tempo, podemos reatribuir um novo valor à variável `gravidade`, e o Python irá atualizar o valor armazenado nela. Digamos que vamos para a lua.
+
+```python
+>>>gravidade = 1.62
+```
+
+Ao verificar o valor de `gravidade` novamente, veremos:
+
+```python
+>>>gravidade
+1.62
+```
+
+Agora algo mais impressionante, o que essa instrução deve produzir?
+
+```python
+>>>gravidade = "Muito Alta"
+```
+
+A resposta:
+
+```python
+>>>gravidade
+'Muito Alta'
+>>> type(gravidade)
+<class 'str'>
+```
+
+Perceba que o Python não reclamou da atribuição de um valor **string** para uma variável que antes armazenava um **float**. Python é uma linguagem de **tipagem dinâmica**, o que significa que uma variável pode armazenar diferentes tipos de dados ao longo do tempo. 
+
+> ⚠️ Isso é diferente de linguagens de **tipagem estática**, onde uma variável deve armazenar sempre o mesmo tipo de dado. 
+>
+>Quem sabe um dia o HackerSpace crie um curso de C++ ou Java. ¯\\_(ツ)_/¯
 
