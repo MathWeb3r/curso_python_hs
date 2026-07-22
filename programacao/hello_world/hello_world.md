@@ -38,7 +38,7 @@ Temos como objetivo apresentar esse universo, com base em três pilares fundamen
 
 # Nossa linguagem de programação: Python!
 
-> "So it's beguin " 
+> "So it's beguin " senhor dos anel
 
 A linguagem de programação que vamos utilizar neste curso é o Python. Mas por quê Python? Ela é ao mesmo tempo simples e poderosa. Fácil para Iniciantes e boa para experientes. No vasto mapa do mundo do desenvolvimento, existem muitas linguagens, mas o Python se tornou a língua da ciência moderna
 
@@ -65,7 +65,7 @@ Após instalar abra o terminal do sistema operacional (No windows: <kbd>Ctrl</kb
 ```bash
 $ python3 --version
 ```
-> O símbolo `$` é apenas para indicar que o comando deve ser digitado no terminal, não precisa digitá-lo. No seu computador deve aparecer algo como: `c:\Users\computador>` ou `computador@linux:~$`.
+> ℹ️ **Informação:** O símbolo `$` é apenas para indicar que o comando deve ser digitado no terminal, não precisa digitá-lo. No seu computador deve aparecer algo como: `c:\Users\computador>` ou `computador@linux:~$`.
 
 Se a instalção der certo, você verá algo parecido com isso 
 
@@ -73,7 +73,7 @@ Se a instalção der certo, você verá algo parecido com isso
 Python 3.12.3
 ```
 
-> O número da versão pode ser diferente, depende de qual versão do python você instalou. Inclusive, quando estiver lendo isso, já deve existir uma versão mais nova. Recomendo que instale a versão mais recente disponível
+> ℹ️ **Informação:**  O número da versão pode ser diferente, depende de qual versão do python você instalou. Inclusive, quando estiver lendo isso, já deve existir uma versão mais nova. Recomendo que instale a versão mais recente disponível
 
 ## Brincando um pouco com Python (REPL)
 
@@ -95,9 +95,9 @@ Olá, Mundo!
 
 O `print()` é uma função básica que exibe texto ou resultados na tela. Repare que a coisa que está entre parênteses está escrita entre aspas duplas ``" "``, isso é sinal de que essa coisa tem formato de texto (Você verá que isso define um tipo chamado `string`, mas não se preocupe com os nomes agora)
 
-> Dizem por aí que existe uma superstição que se o seu primeiro comando não for `print("Olá, Mundo!")`, você terá má sorte na sua jornada de aprendizado e coisas terríveis aconterão! Não sou muito supersticioso, mas eu não brincaria com isso...  
+> 💡 **Dica:** Dizem por aí que existe uma superstição que se o seu primeiro comando não for `print("Olá, Mundo!")`, você terá má sorte na sua jornada de aprendizado e coisas terríveis aconterão! Não sou muito supersticioso, mas eu não brincaria com isso...  
 
-Vamos fazer algumas operações matemáticas, tente fazer isso no seu terminal:
+Vamos fazer algumas operações matemáticas, tente fazer isso no seu terminal:e
 
 ```python
 >>> 2 + 2
@@ -191,7 +191,7 @@ Na primeira linha, temos o statement `print("Meu primeito script :)")`. Este sta
 Meu primeito script :)
 ```
 
->Repare que a função `print()` cria uma nova linha no terminal toda vez que é chamada. Este é o comportamente padrão mas pode ser alterado.
+> ℹ️ **Informação:** Repare que a função `print()` cria uma nova linha no terminal toda vez que é chamada. Este é o comportamente padrão mas pode ser alterado.
 
 Na terceira linha temos o statement `a = 10 + 5`. Este _statement_ é o que chamamos de atribuição (_assignment_ em inglês). Basicamente estamos criando uma variável chamada `a` e atribuindo o valor `10 + 5` a ela. O Python vai calcular `10 + 5`, obter o resultado `15` e armazenar esse valor na variável `a`. Em breve vamos discutir melhor o que são variáveis e como elas funcionam. Então quando chamamos a função `print(a)` na quarta linha, o Python vai buscar o valor armazenado na variável `a` e imprimir na tela.
 
