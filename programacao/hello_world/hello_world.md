@@ -1,9 +1,3 @@
----
-title: "Hello World"
-sidebar_position: 1 #coisa pro docusaurus
-slug: "hello-world"
----
-
 # Bem-vindo ao fascinante universo da computação!
 
 ## Uma pequena motivação (Nota do autor)
