@@ -6,7 +6,7 @@ Não sei em quanto detalhes vou entrar, mas vou tentar manter um nível de profu
 -->
 
 
-# Números, Tipos, Expressões e Mais!
+# Números, Tipos, Variáveis e Mais!
 
 > "A resposta para a pergunta fundamental sobre a vida, o universo e tudo mais é 42." - Douglas Adams.
 
