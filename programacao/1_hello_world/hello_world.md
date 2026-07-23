@@ -30,8 +30,6 @@ Nesses blocos vão aparecer tanto trechos de código quanto comandos de terminal
 
 # Nossa linguagem de programação: Python!
 
-> "So it begins" - Senhor dos Anéis
-
 A linguagem de programação que vamos utilizar neste curso é o Python. Mas por que Python? Ela é ao mesmo tempo simples e poderosa. Fácil para iniciantes e boa para experientes. No vasto mapa do mundo do desenvolvimento, existem muitas linguagens, mas o Python se tornou a língua da ciência moderna.
 
 - **Simplicidade e Clareza**: A escrita é limpa, muito próxima da forma como explicamos um problema a outro ser humano.

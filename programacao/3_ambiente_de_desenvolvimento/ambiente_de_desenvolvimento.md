@@ -16,19 +16,19 @@ Para instalar o **VS Code**, entre no site https://code.visualstudio.com/. O sit
 
 Após ter instalado a IDE, e passar pelos passos de configuração inicial, você deve estar vendo algo assim:
 
-![alt text](vscode_inicial.png)
+![Tela inicial de boas-vindas do VS Code](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/3_ambiente_de_desenvolvimento/vscode_inicial.png?raw=True)
 
 Crie em algum lugar do seu computador uma pasta para colocar nossos programas. Agora no VS Code, no canto superior esquerdo clique em **Arquivo** (_File_) e depois em **Abrir Pasta** (_Open Folder_). Selecione a pasta que você acabou de criar. Aqui eu criei uma pasta chamada "curso_python", na minha área de trabalho. Viu que surgiu "curso_python" na coluna lateral esquerda? 
 
-![alt text](vscode_folder.png)
+![Barra lateral do VS Code com a pasta curso_python aberta](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/3_ambiente_de_desenvolvimento/vscode_folder.png?raw=True)
 
 Agora clique nessa coluna lateral esquerda onde está escrito "curso_python" e depois clique no ícone de arquivo com um sinal de mais. Dê o nome de **"primeiro_programa.py"** e aperte **Enter**. 
 
-![alt text](vscode_program.png)
+![Criação do arquivo primeiro_programa.py na barra lateral do projeto](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/3_ambiente_de_desenvolvimento/vscode_program.png?raw=True)
 
 Por último, pressione <kbd>ctrl</kbd> + <kbd>J</kbd>, e veja um terminal surgir na parte inferior da tela. Você deve estar vendo algo como isto:
 
-![alt text](vscode_final.png)
+![Interface do VS Code com editor e terminal integrado aberto](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/3_ambiente_de_desenvolvimento/vscode_final.png?raw=True)
 
 O que temos aqui: Essa coluna lateral esquerda é onde fica o explorer dos seus arquivos, ali você navega pelas pastas e arquivos do seu projeto. A parte central superior é o seu editor, onde você escreve o código. E a parte inferior é o terminal, que é o exato mesmo terminal do seu sistema. 
 
@@ -50,7 +50,7 @@ $ python3 primeiro_programa.py
 
 Vimos um texto aparecer no terminal, correto? Então, acabamos de escrever e executar o nosso primeiro programa!
 
-![alt text](vscode_primeiro.png)
+![Execução do programa no terminal do VS Code exibindo o resultado Olá Visual Studio Code!](vscode_primeiro.png)
 
 Para melhorar ainda mais a nossa experiência, instale a [extensão Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) para o VS Code. Ela oferece alguns recursos extras que facilitam o desenvolvimento em Python. Para isso clique no ícone de extensões (<img src="https://raw.githubusercontent.com/microsoft/vscode-icons/main/icons/dark/extensions.svg" width="16" height="16" alt="Extensões">)  na coluna lateral esquerda e pesquise por "Python". Então clique no botão **Instalar**. Agora, volte para o seu arquivo, clicando na aba do editor, e no canto superior direito, clique no botão de play <img src="https://raw.githubusercontent.com/microsoft/vscode-icons/main/icons/dark/run.svg" width="16" height="16" alt="Run"> para executar o programa. Você deve ver o mesmo resultado no terminal.
 
