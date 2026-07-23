@@ -280,7 +280,6 @@ Se por acaso você não seguir essas regras o Python pode não gerar um erro de 
 
 > Vamos seguir boas práticas durante o curso :). Umas delas é o PEP 8, um guia de estilo que define como o código Python deve ser escrito. Dentre as recomendações, usaremos o **snake_case** (tudo minúsculo com underscores separando as palavras) para nomear variáveis e funções. Por exemplo, escrevemos `bolo_de_cenoura` e não `boloDeCenoura`.
 
+Acredito que a partir desse ponto, já consolidamos o **conhecimento básico** necessário para começarmos a desenvolver nossos primeiros programas. Caso alguma informação tão tenha ficado clara, você pode ler novamente ou consultar os [Conteúdo de apoio](#). A verdade é que os conceitos apresentados aqui, serão repetidos diversas vezes ao longo das aulas, e os possíveis _gaps_ serão preenchidos com o tempo. Com isso, o próximo passo já é colocar a **mão na massa** e começar a **criar programas**!
 
-
-
-
+> "A imaginação é mais importante que o conhecimento. O conhecimento é limitado, ao passo que a imaginação abrange o mundo inteiro." - Albert Einstein
