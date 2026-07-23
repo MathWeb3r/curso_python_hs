@@ -113,9 +113,9 @@ False
 
 > ⚠️ Note que Python é **case-sensitive** (sensível ao tamanho das letras).  Portanto, `True` e `true` não são a mesma coisa. Se digitarmos `true` em vez de `True`, receberemos um erro. 
 
-# Textos
+## Textos
 
-Nós seres humanos que estamos atras da tela do computador, costumamos nos cumprimentar fando algo como "Olá, como vai você?", ao invés de "01000010 01100001 01101110 01100001 01101110 01100001 01110011". Por isso precisamos também dos tipos de texto. 
+Nós seres humanos que estamos atras da tela do computador, costumamos nos cumprimentar fando algo como "Olá, como vai você?", ao invés de "01000010 01100001 01101110 01100001 01101110 01100001 01110011". Por isso precisamos também dos tipos de texto nos nossos programas.  
 
 Em Python, textos são chamados de **strings** e são denotados por `str`. As strings em Python são sequências de caracteres, e podem ser criadas usando aspas simples `'` ou aspas duplas `"`. Por exemplo:
 
@@ -166,16 +166,39 @@ ValueError: invalid literal for int() with base 10: '10a'
 >
 > "A maior das professoras, a falha é." - Mestre Yoda.
 
-## Variáveis 
+## O tipo NoneType
 
-Em qualquer linguagem de programação, precisamos de **variáveis** para armazenar dados. As **variáveis** são como caixas que podem armazenar diferentes tipos de dados. Por exemplo, podemos criar uma variável para armazenar um número inteiro, outra para armazenar um número float, outra para armazenar um booleano e outra para armazenar uma string. Veja o exemplo:
+Existe um tipo especial em Python, chamado `NoneType`, que só pode assumir uma valor: `None`. Essa dado não é um número, nem um texto, nem nada '-' . Podemos pensar nele como um "vazio", ou a ausencia de um valor.
+
+```python
+>>>None == 1
+False
+>>>None == 0
+False
+>>>None == "Bolo de Cenoura"
+False
+>>>None == True
+False
+>>>None == False
+False
+```
+
+A primieira vista `None` pode parecer um tanto inútil, mas veremos na prática que ele é na verdade bastante útil em algumas situações.
+
+# Variáveis 
+
+Ainda existem outros tipos de dados em Python, por exemplo listas, tuplas, dicionários, conjuntos e etc. Mas antes de seguirmos em frente, vamos solidificar o que vimos até agora, criando nossas primeiras **variáveis**.
+
+Em qualquer linguagem de programação, precisamos de **variáveis** para armazenar dados. As **variáveis** são como caixas com um rótulo, onde podemos guardar diferentes valores. Por exemplo, vamos definir uma variável para guardar a gravidade do planeta Terra. 
 
 ```python
 >>>gravidade = 9.8 # Um float
 ```
 
 O que está acontecendo aqui? Estamos **atribuindo** o valor `9.8` à variável `gravidade`. Podemos ler essa instrução como
-"gravidade recebe 9.8". Como a atribuição é feita com o operador `=`, muitos iniciantes costumas interpretar essa instrução `gravidade = 9.8` como "garvidade é igual a 9.8", o que é um erro comum, mas pode levar a confusões posteriores. 
+"gravidade recebe 9.8". 
+
+Como a atribuição é feita com o operador `=`, muitos iniciantes costumas interpretar essa instrução `gravidade = 9.8` como "garvidade é igual a 9.8", o que é um erro comum, mas pode levar a confusões posteriores. 
 
 Ainda no mesmo terminal, se você digitar apenas o nome da variável `gravidade`, verá que o Python retornará o valor que está armazenado nela. Por exemplo:
 
@@ -226,4 +249,24 @@ Perceba que o Python não reclamou da atribuição de um valor **string** para u
 > ⚠️ Isso é diferente de linguagens de **tipagem estática**, onde uma variável deve armazenar sempre o mesmo tipo de dado. 
 >
 >Quem sabe um dia o HackerSpace crie um curso de C++ ou Java. ¯\\_(ツ)_/¯
+
+## Algumas regrinhas para nomear variáveis
+
+Existem algumas convenções para dar nome a sua variável.
+
+1. **Primeira letra:** O nome da variável deve sempre começar com uma **letra minuscula** (a-z) ou **sublinhado** ( _ )
+
+2. **Caracteres permitidos:** Os caracteres permitidos em um nome de variável são letras (a-z, A-Z), números (0-9) e sublinhado ( _ ). Não use caracteres especiais ou acentos como `!`, `@`, `#`, `$`, `%`, `^`, `&`, etc.
+
+3. **Palavras Reservadas:** O nome da sua variável **nunca** deve ser uma palavra reservada, isto é, palavras que já definem alguma função ou atributo nativo do Python. Por exemplo **print**, **float**, **str**, etc. O Python possui cerca de [35 palavras reservadas](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
+
+4. **Case Sensitive:** O Python é **case sensitive**, ou seja, as variáveis `minhaVariavel` e `minhavariavel` são diferentes.
+
+5. **Descritivo:** Essa regra não é uma regra em si, mas sim uma boa prática (Eu diria indispensavel :D). O nome da variável deve ser descritivo, ou seja, deve indicar o que a variável armazena. Por exemplo, `gravidade_da_terra` ao invés de `g_terra` e muito menos `g` ou `x`. 
+
+Se por acaso você não seguir essas regras o Python pode não gerar um erro de sintaxe, mas o seu código ficará muito difícil de entender e manter. 
+
+> Vamos seguir boas práticas durante o curso :). Umas delas é o PEP 8, um guia de estilo que define como o código Python deve ser escrito. Dentre as recomendações, usaremos o **snake_case** (tudo minúsculo com underscores separando as palavras) para nomear variáveis e funções. Por exemplo, escrevemos `bolo_de_cenoura` e não `boloDeCenoura`.
+
+
 

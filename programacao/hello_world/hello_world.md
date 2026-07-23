@@ -13,22 +13,20 @@ luminosos." - Karl Marx.
 ## Pra quem são essas aulas?
 Para aquelas pessoas que a curiosidade é maior do que qualquer ferramenta. Não é preciso ter nenhum conhecimento prévio em programação, mas é preciso ter vontade de aprender. Como cientistas (ou futuros cientistas!) somos movidos pelo desejo inquieto de entender como as coisas funcionam, de conseguir enxergar os padrões escondidos por trás do caos.
 
-## Quais são as competências que você vai adquirir dessas aulas?
-Temos como objetivo apresentar esse universo, com base em três pilares fundamentais para se desenvolver na física (?)
+Ao mesmo tempo, espero que aqueles que já tenham algum conhecimento, também possam relembrar alguns conceitos e quem sabe, aprender algo novo.
 
-1. Aulas de Programação
+Além de ensinar a programar, espero ensinar o aluno a aprender. Fez sentido isso? O mundo da computação tem conteúdo virtualmente infinito, é impossível unir tudo em apenas um livro, site ou curso. Ser autodidata é uma qualidade essencial para o cientista, e como qualquer outra habilidade, pode ser aprendida. Muitas vezes, ao desenvolver programas, você se vera diante de problemas ou erros que não conseguirá resolver, e terá que recorrer aos foruns, sites, documentações, etc. Isso é completamente normal e corriqueiro na vida de todo programador. 
 
-    em python, variaveis, listas, funcoes, algoritimos, oop, etc..
+## Como estudar com essas aulas
+Acredito que não seja possível aprender a programar apenas lendo ou assistindo aulas. A prática e a repetição são indispensáveis. Então a minha recomendação é: Mantenha essas aulas abertas no seu navegador e vá acompanhando os exemplos, executando-os em seu computador. Depois, tente modificar os exemplos um pouco e ver o que acontece. Por fim, tente fazer os exercícios propostos (se tiver algum). E, acima de tudo, não tenha medo de errar!
 
-2. Aprendendo a desenvolver projetos
+Ao longo dos artigos vão haver blocos de código, como este:
 
-    IDE's, git e github, project management, etc...
+```
+Exemplo de bloco de código
+```
 
-3. Aulas em Análise de Dados e Aplicações na Física
-
-    modelagem, fittin, plotting, statistcs, etc..
-
-> Quote (vou inserir futuramente, aguarde)
+Nesses blocos vão aparecer tanto quanto trechos de códigos, comandos de terminal, ou mesmo a resultados de um comando. Estes serão nossos exemplos. Minha dica de aprendizado: **Escreva** os exemplos no seu computador, ao invés de copiar e colar. Confie em mim, isso vai ajudar bastante! ;D
 
 # Nossa linguagem de programação: Python!
 
@@ -68,6 +66,9 @@ Python 3.12.3
 ```
 
 > ℹ️ **Informação:**  O número da versão pode ser diferente, depende de qual versão do python você instalou. Inclusive, quando estiver lendo isso, já deve existir uma versão mais nova. Recomendo que instale a versão mais recente disponível
+
+> Já conhecia o terminal? Não?! Nesse caso, acredito que podemos fazer um introdução formal! Olhando para tela do seu computador, diga em voz alta: "Olá terminal, meu nome é ([Seu nome])!". Ele provavelmente não vai responder...
+
 
 ## Brincando um pouco com Python (REPL)
 
