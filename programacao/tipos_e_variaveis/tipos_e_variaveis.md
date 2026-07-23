@@ -5,10 +5,9 @@ Em específico aqui vamos falar sobre numeros, tipos e variáveis.
 Não sei em quanto detalhes vou entrar, mas vou tentar manter um nível de profundidade bom para que vocês entendam de fato o que está acontecendo. Em futuras revisões eu posso detalhar mais algumas coisas ou enxugar um pouco.
 -->
 
-
-# Números, Tipos, Variáveis e Mais!
-
 > "A resposta para a pergunta fundamental sobre a vida, o universo e tudo mais é 42." - Douglas Adams.
+
+# Tipos de Dados
 
 Em geral, quando pensamos em programação, pensamos em lógica, em algoritmos, em estruturas de controle. Mas, antes de tudo, a programação é sobre lidar com dados, com números, com texto, com imagens, com sons. E é sobre isso que vamos falar aqui. A explicação desse paragrafo pode parecer um pouco abstrata, mas veremos ao longo deste artigo que na prática é mais fácil de entender.
 
