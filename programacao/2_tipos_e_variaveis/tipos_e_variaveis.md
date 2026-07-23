@@ -1,7 +1,7 @@
 <!--
-A ideia desse artigo é apresentar as partes elementares da programação em python. Apesar da linguagem ser python, gostaria de algumas noções do funcionamento dessas coisas no contexto da computação em geral. Estou falando de variáveis, funções, estruturas de controle, etc..  
+A ideia desse artigo é apresentar as partes elementares da programação em Python. Apesar de a linguagem ser Python, gostaria de algumas noções do funcionamento dessas coisas no contexto da computação em geral. Estou falando de variáveis, funções, estruturas de controle, etc..  
 
-Em específico aqui vamos falar sobre numeros, tipos e variáveis.
+Em específico aqui vamos falar sobre números, tipos e variáveis.
 Não sei em quanto detalhes vou entrar, mas vou tentar manter um nível de profundidade bom para que vocês entendam de fato o que está acontecendo. Em futuras revisões eu posso detalhar mais algumas coisas ou enxugar um pouco.
 -->
 
@@ -11,14 +11,14 @@ Não sei em quanto detalhes vou entrar, mas vou tentar manter um nível de profu
 
 Em geral, quando pensamos em programação, pensamos em lógica, em algoritmos, em estruturas de controle. Mas, antes de tudo, a programação é sobre lidar com dados, com números, com texto, com imagens, com sons. E é sobre isso que vamos falar aqui. 
 
-Os dados em Python são organizados em **Tipos**. Existem tipos para números, texto, valores lógicos (Verdadeiro/Falso), listas e muitos outros. Aqui vamos falar dos tipos **built-in** (embutidos), que já vem com o python. Começando pelos números.
+Os dados em Python são organizados em **Tipos**. Existem tipos para números, texto, valores lógicos (Verdadeiro/Falso), listas e muitos outros. Aqui vamos falar dos tipos **built-in** (embutidos), que já vem com o Python. Começando pelos números.
 
 
 ## Números em Python
 
 Vamos iniciar o Python em modo REPL e vamos brincar um pouco com números. 
 
-> 💡 Para acessar o modo REPL, digite `python3` (ou `python`) no terminal do seu sistema. Veja a aula ([Olá mundo!](hello_world.md)), caso você não esteja familizarizado.
+> 💡 Para acessar o modo REPL, digite `python3` (ou `python`) no terminal do seu sistema. Veja a aula ([Olá mundo!](hello_world.md)), caso você não esteja familiarizado.
 
 Digitando `1` pressionado a tecla <kbd>Enter</kbd>, teremos:
 
@@ -45,15 +45,15 @@ Um passo mais ousado:
 
 Brinque um pouco com os números. _O que acontece se você tentar dividir por 0? Teste no seu terminal =)_
 
-Os dois primeiros valores, `1` e `10.5`, são exemplos de dois tipos principais de números em python, um inteiro e um decimal. Assim como na Matemática, números como 1, 2, 200, -10 serão chamados de **inteiros**, denotados por `int`. Números decimais como 1.5, 2.3, 3.14159, -10.5, e outros números com decimais, serão chamados de **ponto flutuante**, denotados por `float`. 
+Os dois primeiros valores, `1` e `10.5`, são exemplos de dois tipos principais de números em Python, um inteiro e um decimal. Assim como na Matemática, números como 1, 2, 200, -10 serão chamados de **inteiros**, denotados por `int`. Números decimais como 1.5, 2.3, 3.14159, -10.5, e outros números com decimais, serão chamados de **ponto flutuante**, denotados por `float`. 
 
 > ℹ️  Existem também os números **complexos**, denotados por `complex`, que são números da forma a + bi, onde a e b são números reais. Todavia, não iremos focar neles por enquanto, pois eles aparecem num formato um pouco mais complexo (que ironia, não é mesmo?).
 
 Um dado qualquer em Python é um **objeto**, e todo objeto tem um **tipo**. Por exemplo, o número `1` é uma **instância** do tipo `int`. O número `10.5` é uma **instância** do tipo `float`. 
 
-> Essa ideia de que tudo em Python é um objeto pode não fazer sentido agora, mas é consequencia do fato de Python ser uma linguagem de **programação orientada a objetos**. No futuro você verá que também será capaz de criar seus proprios tipos!. 
+> Essa ideia de que tudo em Python é um objeto pode não fazer sentido agora, mas é consequência do fato de Python ser uma linguagem de **programação orientada a objetos**. No futuro você verá que também será capaz de criar seus próprios tipos!
 
-Para verificar qual é o *tipo* de um dado ou uma variável, usando a função _bultin_ `type()`. Por exemplo:
+Para verificar qual é o *tipo* de um dado ou uma variável, usamos a função _built-in_ `type()`. Por exemplo:
 
 ```python
 >>> type(42)
@@ -62,7 +62,7 @@ Para verificar qual é o *tipo* de um dado ou uma variável, usando a função _
 <class 'float'>
 ```
 
-Podemos converter um tipo em outro. Por exemplo, podemos converter um inteiro em um float, ou um float em um inteiro, usando as funções _builtin_ `float()` e `int()`. Veja o exemplo:
+Podemos converter um tipo em outro. Por exemplo, podemos converter um inteiro em um float, ou um float em um inteiro, usando as funções _built-in_ `float()` e `int()`. Veja o exemplo:
 
 ```python
 >>> 10
@@ -79,7 +79,7 @@ Podemos converter um tipo em outro. Por exemplo, podemos converter um inteiro em
 
 ## Booleanos
 
-Um outro tipo de dado muito importante são os **booleanos**, que representam os valores verdadeiros ou falsos, denotados por `bool`. Um dado booelanos pode assumir dois valores, `True` ou `False` (Verdadeiro ou Falso). A boolean é uma unidade fundamental na computação, pois é a base para a tomada de decisão em programas de computador.
+Outros tipos de dados muito importantes são os **booleanos**, que representam os valores verdadeiros ou falsos, denotados por `bool`. Um dado booleano pode assumir dois valores, `True` ou `False` (Verdadeiro ou Falso). O booleano é uma unidade fundamental na computação, pois é a base para a tomada de decisão em programas de computador.
 
 ```python
 >>> type(True)
@@ -88,7 +88,7 @@ Um outro tipo de dado muito importante são os **booleanos**, que representam os
 <class 'bool'>
 ```
 
-Esses tipo de valor é comum em qualquer linguagem de programação. Quando uma expressão pode ser classificada como verdadeira ou falsa, dizemos que ela é uma **expressão booleana**. Por exemplo:
+Esse tipo de valor é comum em qualquer linguagem de programação. Quando uma expressão pode ser classificada como verdadeira ou falsa, dizemos que ela é uma **expressão booleana**. Por exemplo:
 
 ```python
 >>> 2 + 2 == 4
@@ -101,7 +101,7 @@ False
 
 > ⚠️ O operador de igualdade em Python é escrito `==`, e não `=`. O operador `=` é reservado para atribuir um valor a uma variável, que veremos adiante.
 
-Os números 0 e 1, também podem ser usados como valores booleanos. Também podemos converter valores booleanos para números inteiros usando a função `int()`, e números inteiros para valores booleanos usando a função `bool()`. Isso será bem util para nossas expressões no futuro. Veja o exemplo:
+Os números 0 e 1, também podem ser usados como valores booleanos. Também podemos converter valores booleanos para números inteiros usando a função `int()`, e números inteiros para valores booleanos usando a função `bool()`. Isso será bem útil para nossas expressões no futuro. Veja o exemplo:
 
 ```python
 >>> True == 1
@@ -121,13 +121,13 @@ True
 False
 ```
 
-> 💡 Se tentarmos converter outros inteiros, ou até mesmo números float, veremos que qualquer valor diferente de 0 é convertido para `True` e 0 é convertido para `False`. Teste isso no seu computrador ;P
+> 💡 Se tentarmos converter outros inteiros, ou até mesmo números float, veremos que qualquer valor diferente de 0 é convertido para `True` e 0 é convertido para `False`. Teste isso no seu computador ;P
 
 > ⚠️ Note que Python é **case-sensitive** (sensível ao tamanho das letras).  Portanto, `True` e `true` não são a mesma coisa. Se digitarmos `true` em vez de `True`, receberemos um erro. 
 
 ## Textos
 
-Nós seres humanos que estamos atras da tela do computador, costumamos nos cumprimentar fando algo como "Olá, como vai você?", ao invés de "01000010 01100001 01101110 01100001 01101110 01100001 01110011". Por isso precisamos também dos tipos de texto nos nossos programas.  
+Nós, seres humanos, que estamos atrás da tela do computador, costumamos nos cumprimentar falando algo como "Olá, como vai você?", ao invés de "01000010 01100001 01101110 01100001 01101110 01100001 01110011". Por isso precisamos também dos tipos de texto nos nossos programas.  
 
 Em Python, textos são chamados de **strings** e são denotados por `str`. As strings em Python são sequências de caracteres, e podem ser criadas usando aspas simples `'` ou aspas duplas `"`. Por exemplo:
 
@@ -142,7 +142,7 @@ Em Python, textos são chamados de **strings** e são denotados por `str`. As st
 
 Embora "2" seja um caractere que pode ser representado por um número inteiro, ele é uma string porque está entre aspas. 
 
-> ℹ️ Isso pode ser uma fonte de confusão para iniciantes, principalpente ao usar a função `input()`, que veremos mais adiante. Nem sempre os tipos são explicitos, por exemplo ao escrever o comando `print("2")` e `print(2)`, ambos serão impressos da mesma forma, ainda que sejam dois tipos diferentes. Mas conforme você praticar essas confusões desaparecerão ;)
+> ℹ️ Isso pode ser uma fonte de confusão para iniciantes, principalmente ao usar a função `input()`, que veremos mais adiante. Nem sempre os tipos são explícitos, por exemplo ao escrever o comando `print("2")` e `print(2)`, ambos serão impressos da mesma forma, ainda que sejam dois tipos diferentes. Mas, conforme você praticar, essas confusões desaparecerão ;)
 
 Python é codificado em **unicode**, que é um padrão de codificação de caracteres que permite representar praticamente todos os caracteres de todos os idiomas do mundo (inclusive emojis! 😂). 
 
@@ -155,11 +155,11 @@ Você simplesmente continua tentando até acabar o bolo.
 🎂
 ```
 
-<!--Trecho do poema da GlaD0s, do portal. Gosto muito. Talvez faça mais referencias ao bolo :D-->
+<!--Trecho do poema da GlaD0s, do portal. Gosto muito. Talvez faça mais referências ao bolo :D-->
 
 > :bulb: Existem outras sequências de escape. Para ver outras sequências de escape, basta digitar `help(str)` no modo REPL.
 
-Podemos converter outros tipos de dados em **strings** usando a função `str()`. Mas o contrário nem sempre é verdade, não são todos os caracteres de uma string podem ser convertidos para outros tipos de dados. Por exemplo, se uma string contém letras, ela não pode ser convertida para um número inteiro ou float. Veja o exemplo:
+Podemos converter outros tipos de dados em **strings** usando a função `str()`. Mas o contrário nem sempre é verdade, nem todos os caracteres de uma string podem ser convertidos para outros tipos de dados. Por exemplo, se uma string contém letras, ela não pode ser convertida para um número inteiro ou float. Veja o exemplo:
 
 ```python
 >>> str(10) # convertendo um inteiro para string
@@ -174,28 +174,28 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: '10a'
 ```
 
-> :bulb: A ultima instrução gera um erro, pois uma string que contém letras não pode ser convertida para um número inteiro. Agora repare na maneira como este erro esta escrito. É bem descritivo e nos diz o que aconteceu e onde aconteceu. Isso é chamado de **stack trace**. A primeira linha diz que o erro aconteceu na linha 1 (é a única), e o nome do arquivo (neste caso `<stdin>`, pois estamos no REPL). A ultima linha diz o tipo do erro (neste caso erro de valor, `ValueError`) e descreve o que aconteceu. `invalid literal for int() with base 10: '10a'`. Durante a sua jornada de aprendizado, você verá mensagem como esta o tempo todo :)
+> :bulb: A última instrução gera um erro, pois uma string que contém letras não pode ser convertida para um número inteiro. Agora repare na maneira como este erro está escrito. É bem descritivo e nos diz o que aconteceu e onde aconteceu. Isso é chamado de **stack trace**. A primeira linha diz que o erro aconteceu na linha 1 (é a única), e o nome do arquivo (neste caso `<stdin>`, pois estamos no REPL). A última linha diz o tipo do erro (neste caso erro de valor, `ValueError`) e descreve o que aconteceu. `invalid literal for int() with base 10: '10a'`. Durante a sua jornada de aprendizado, você verá mensagens como esta o tempo todo :)
 >
 > "A maior das professoras, a falha é." - Mestre Yoda.
 
 ## O tipo NoneType
 
-Existe um tipo especial em Python, chamado `NoneType`, que só pode assumir uma valor: `None`. Essa dado não é um número, nem um texto, nem nada '-' . Podemos pensar nele como um "vazio", ou a ausencia de um valor.
+Existe um tipo especial em Python, chamado `NoneType`, que só pode assumir um valor: `None`. Esse dado não é um número, nem um texto, nem nada '-' . Podemos pensar nele como um "vazio", ou a ausência de um valor.
 
 ```python
->>>None == 1
+>>> None == 1
 False
->>>None == 0
+>>> None == 0
 False
->>>None == "Bolo de Cenoura"
+>>> None == "Bolo de Cenoura"
 False
->>>None == True
+>>> None == True
 False
->>>None == False
+>>> None == False
 False
 ```
 
-A primieira vista `None` pode parecer um tanto inútil, mas veremos na prática que ele é na verdade bastante útil em algumas situações.
+À primeira vista `None` pode parecer um tanto inútil, mas veremos na prática que ele é na verdade bastante útil em algumas situações.
 
 # Variáveis 
 
@@ -204,13 +204,13 @@ Ainda existem outros tipos de dados em Python, por exemplo listas, tuplas, dicio
 Em qualquer linguagem de programação, precisamos de **variáveis** para armazenar dados. As **variáveis** são como caixas com um rótulo, onde podemos guardar diferentes valores. Por exemplo, vamos definir uma variável para guardar a gravidade do planeta Terra. 
 
 ```python
->>>gravidade = 9.8 # Um float
+>>> gravidade = 9.8 # Um float
 ```
 
 O que está acontecendo aqui? Estamos **atribuindo** o valor `9.8` à variável `gravidade`. Podemos ler essa instrução como
 "gravidade recebe 9.8". 
 
-Como a atribuição é feita com o operador `=`, muitos iniciantes costumas interpretar essa instrução `gravidade = 9.8` como "garvidade é igual a 9.8", o que é um erro comum, mas pode levar a confusões posteriores. 
+Como a atribuição é feita com o operador `=`, muitos iniciantes costumam interpretar essa instrução `gravidade = 9.8` como "gravidade é igual a 9.8", o que é um erro comum, mas pode levar a confusões posteriores. 
 
 Ainda no mesmo terminal, se você digitar apenas o nome da variável `gravidade`, verá que o Python retornará o valor que está armazenado nela. Por exemplo:
 
@@ -219,7 +219,7 @@ Ainda no mesmo terminal, se você digitar apenas o nome da variável `gravidade`
 9.8
 ```
 
-> Em algumas outras linguagens, é preciso definir uma variável antes de atribuir um valor a ela, dizendo qual será o tipo de dado que ela irá armazenar. Em python isso não é necessário, basta atribuir um valor a uma variável e ela será criada automaticamente.
+> Em algumas outras linguagens, é preciso definir uma variável antes de atribuir um valor a ela, dizendo qual será o tipo de dado que ela irá armazenar. Em Python isso não é necessário, basta atribuir um valor a uma variável e ela será criada automaticamente.
 
 Podemos verificar o tipo desta variável usando a função `type()`:
 
@@ -264,9 +264,9 @@ Perceba que o Python não reclamou da atribuição de um valor **string** para u
 
 ## Algumas regrinhas para nomear variáveis
 
-Existem algumas convenções para dar nome a sua variável.
+Existem algumas convenções para dar nome à sua variável.
 
-1. **Primeira letra:** O nome da variável deve sempre começar com uma **letra minuscula** (a-z) ou **sublinhado** ( _ )
+1. **Primeira letra:** O nome da variável deve sempre começar com uma **letra minúscula** (a-z) ou **sublinhado** ( _ )
 
 2. **Caracteres permitidos:** Os caracteres permitidos em um nome de variável são letras (a-z, A-Z), números (0-9) e sublinhado ( _ ). Não use caracteres especiais ou acentos como `!`, `@`, `#`, `$`, `%`, `^`, `&`, etc.
 
@@ -274,12 +274,12 @@ Existem algumas convenções para dar nome a sua variável.
 
 4. **Case Sensitive:** O Python é **case sensitive**, ou seja, as variáveis `minhaVariavel` e `minhavariavel` são diferentes.
 
-5. **Descritivo:** Essa regra não é uma regra em si, mas sim uma boa prática (Eu diria indispensavel :D). O nome da variável deve ser descritivo, ou seja, deve indicar o que a variável armazena. Por exemplo, `gravidade_da_terra` ao invés de `g_terra` e muito menos `g` ou `x`. 
+5. **Descritivo:** Essa regra não é uma regra em si, mas sim uma boa prática (Eu diria indispensável :D). O nome da variável deve ser descritivo, ou seja, deve indicar o que a variável armazena. Por exemplo, `gravidade_da_terra` ao invés de `g_terra` e muito menos `g` ou `x`. 
 
 Se por acaso você não seguir essas regras o Python pode não gerar um erro de sintaxe, mas o seu código ficará muito difícil de entender e manter. 
 
 > Vamos seguir boas práticas durante o curso :). Umas delas é o PEP 8, um guia de estilo que define como o código Python deve ser escrito. Dentre as recomendações, usaremos o **snake_case** (tudo minúsculo com underscores separando as palavras) para nomear variáveis e funções. Por exemplo, escrevemos `bolo_de_cenoura` e não `boloDeCenoura`.
 
-Acredito que a partir desse ponto, já consolidamos o **conhecimento básico** necessário para começarmos a desenvolver nossos primeiros programas. Caso alguma informação tão tenha ficado clara, você pode ler novamente ou consultar os [Conteúdo de apoio](#). A verdade é que os conceitos apresentados aqui, serão repetidos diversas vezes ao longo das aulas, e os possíveis _gaps_ serão preenchidos com o tempo. Com isso, o próximo passo já é colocar a **mão na massa** e começar a **criar programas**!
+Acredito que a partir desse ponto, já consolidamos o **conhecimento básico** necessário para começarmos a desenvolver nossos primeiros programas. Caso alguma informação não tenha ficado clara, você pode ler novamente ou consultar o [Conteúdo de apoio](#). A verdade é que os conceitos apresentados aqui serão repetidos diversas vezes ao longo das aulas, e os possíveis _gaps_ serão preenchidos com o tempo. Com isso, o próximo passo já é colocar a **mão na massa** e começar a **criar programas**!
 
 > "A imaginação é mais importante que o conhecimento. O conhecimento é limitado, ao passo que a imaginação abrange o mundo inteiro." - Albert Einstein
