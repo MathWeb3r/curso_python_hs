@@ -9,15 +9,18 @@ Não sei em quanto detalhes vou entrar, mas vou tentar manter um nível de profu
 
 # Tipos de Dados
 
-Em geral, quando pensamos em programação, pensamos em lógica, em algoritmos, em estruturas de controle. Mas, antes de tudo, a programação é sobre lidar com dados, com números, com texto, com imagens, com sons. E é sobre isso que vamos falar aqui. A explicação desse paragrafo pode parecer um pouco abstrata, mas veremos ao longo deste artigo que na prática é mais fácil de entender.
+Em geral, quando pensamos em programação, pensamos em lógica, em algoritmos, em estruturas de controle. Mas, antes de tudo, a programação é sobre lidar com dados, com números, com texto, com imagens, com sons. E é sobre isso que vamos falar aqui. 
+
+Os dados em Python são organizados em **Tipos**. Existem tipos para números, texto, valores lógicos (Verdadeiro/Falso), listas e muitos outros. Aqui vamos falar dos tipos **built-in** (embutidos), que já vem com o python. Começando pelos números.
+
 
 ## Números em Python
 
-Vamos iniciar o python em modo REPL e vamos brincar um pouco com números. 
+Vamos iniciar o Python em modo REPL e vamos brincar um pouco com números. 
 
 > 💡 Para acessar o modo REPL, digite `python3` (ou `python`) no terminal do seu sistema. Veja a aula ([Olá mundo!](hello_world.md)), caso você não esteja familizarizado.
 
-Digitando `1` pressionado a tecla Enter, teremos:
+Digitando `1` pressionado a tecla <kbd>Enter</kbd>, teremos:
 
 ```python
 >>> 1
@@ -31,11 +34,20 @@ Isso significa que o valor do número 1 é 1. Isso é tão óbvio :)! Vamos tent
 10.5
 ```
 
-O valor de 10.5 é 10.5. Programar é tão fácil! >u<
+O valor de `10.5` é `10.5`. Programar é tão fácil! >u<
 
-Estes são os dois tipos principais de números em python. Assim como na Matemática, números como 1, 2, 200, -10 são chamados de **inteiros**, denotados por `int`. Números como 1.5, 2.3, 3.14159, -10.5, e outros números com decimais, são chamados de **ponto flutuante**, denotados por `float`. 
+Um passo mais ousado:
 
-> ℹ️  Existem também os números **complexos**, denotados por `complex`, que são números da forma a + bi, onde a e b são números reais e i é a unidade imaginária (Não iremos focar neles por enquanto, pois eles aparecem em um formate de tupla, que veremos mais adiante).
+```python
+>>> 10 / 2
+5.0
+```
+
+Brinque um pouco com os números. _O que acontece se você tentar dividir por 0? Teste no seu terminal =)_
+
+Os dois primeiros valores, `1` e `10.5`, são exemplos de dois tipos principais de números em python, um inteiro e um decimal. Assim como na Matemática, números como 1, 2, 200, -10 serão chamados de **inteiros**, denotados por `int`. Números decimais como 1.5, 2.3, 3.14159, -10.5, e outros números com decimais, serão chamados de **ponto flutuante**, denotados por `float`. 
+
+> ℹ️  Existem também os números **complexos**, denotados por `complex`, que são números da forma a + bi, onde a e b são números reais. Todavia, não iremos focar neles por enquanto, pois eles aparecem num formato um pouco mais complexo (que ironia, não é mesmo?).
 
 Um dado qualquer em Python é um **objeto**, e todo objeto tem um **tipo**. Por exemplo, o número `1` é uma **instância** do tipo `int`. O número `10.5` é uma **instância** do tipo `float`. 
 
@@ -267,6 +279,8 @@ Existem algumas convenções para dar nome a sua variável.
 Se por acaso você não seguir essas regras o Python pode não gerar um erro de sintaxe, mas o seu código ficará muito difícil de entender e manter. 
 
 > Vamos seguir boas práticas durante o curso :). Umas delas é o PEP 8, um guia de estilo que define como o código Python deve ser escrito. Dentre as recomendações, usaremos o **snake_case** (tudo minúsculo com underscores separando as palavras) para nomear variáveis e funções. Por exemplo, escrevemos `bolo_de_cenoura` e não `boloDeCenoura`.
+
+
 
 
 
