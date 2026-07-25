@@ -1,17 +1,20 @@
-<<<<<<< HEAD
 <!-- 
-Esse artigo é para discutir a criação de Statments
+Esse artigo é para discutir a criação de expressões
 -->
 
 > " " - algem
 
+A este ponto você já deve estar se perguntando: **mas e as operações?**
 
+Vamos começar a discutir as operações básicas que podemos fazer com os tipos de dados que já vimos.
 
-##  Operações Matemáticas
+## Operações Matemáticas
 
-=======
-# Expressões
+## Operadores de Comparação
 
-> " " - algem
+## Operadores Lógicos
 
->>>>>>> 39fe787 (docs: update formatting and style across introductory course materials and convert directory to markdown file)
+## Expressões Compostas
+
+## Tomada de Decisão
+

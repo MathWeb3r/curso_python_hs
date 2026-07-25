@@ -34,7 +34,7 @@ O que temos aqui: Essa coluna lateral esquerda é onde fica o explorer dos seus 
 
 > Existe também uma aba lateral direita, que é o chat do Copilot, a IA do GitHub. Apesar de ser muito útil na vida profissional, esta ferramenta não é necessária para acompanhar o curso. Para fechá-la, clique no "X" que aparece no topo da aba ou <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>J</kbd>. É bom também [desabilitar o auto-completar](https://code.visualstudio.com/docs/editing/ai-powered-suggestions#_enable-or-disable-inline-suggestions).
 
-# Primeiro Programa
+# Estreando Nosso Ambiente
 
 Vamos testar executar um comando nesse ambiente que nós acabamos de criar. Digite o comando abaixo na área central da tela (o editor):
 
@@ -50,11 +50,25 @@ $ python3 primeiro_programa.py
 
 Vimos um texto aparecer no terminal, correto? Então, acabamos de escrever e executar o nosso primeiro programa!
 
-![Execução do programa no terminal do VS Code exibindo o resultado Olá Visual Studio Code!](vscode_primeiro.png)
+![Execução do programa no terminal do VS Code exibindo o resultado Olá Visual Studio Code!](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/3_ambiente_de_desenvolvimento/vscode_primeiro.png?raw=True)
 
 Para melhorar ainda mais a nossa experiência, instale a [extensão Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) para o VS Code. Ela oferece alguns recursos extras que facilitam o desenvolvimento em Python. Para isso clique no ícone de extensões (<img src="https://raw.githubusercontent.com/microsoft/vscode-icons/main/icons/dark/extensions.svg" width="16" height="16" alt="Extensões">)  na coluna lateral esquerda e pesquise por "Python". Então clique no botão **Instalar**. Agora, volte para o seu arquivo, clicando na aba do editor, e no canto superior direito, clique no botão de play <img src="https://raw.githubusercontent.com/microsoft/vscode-icons/main/icons/dark/run.svg" width="16" height="16" alt="Run"> para executar o programa. Você deve ver o mesmo resultado no terminal.
 
 Agora que já temos tudo pronto, podemos começar a estudar Python de verdade!
+
+## Interação com o usuário
+
+Até agora apenas o computador falou com a gente, imprimindo palavras na tela por meio do `print()`. No entanto, como você já deve ter percebido, um programa não serve para muita coisa se não puder receber dados do usuário. Vamos fazer o computador conversar com o usuário (você!). Crie um novo arquivo, `chat.py`, execute esse programa e veja o que acontece no terminal (Na parte inferior da sua _IDE_):
+
+```python
+print("Qual é o seu nome?")
+nome = input("Digite o seu nome: ")
+print("Olá", nome)
+```
+
+Reparou que após o `"Digite o seu nome: "` o cursor ficou piscando ou esperando você digitar alguma coisa?. Digite seu nome e pressione <kbd>Enter</kbd>. Você verá o programa imprimir "Olá" seguido do seu nome.
+
+![Captura de tela do programa chat.py em execução no VS Code](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/3_ambiente_de_desenvolvimento/vscode_chat.png?raw=True)
 
 ## Apêndice: Guia de Instalação do VS Code
 
