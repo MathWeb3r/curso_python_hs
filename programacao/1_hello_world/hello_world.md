@@ -20,13 +20,15 @@ Além de ensinar a programar, espero ensinar o aluno a aprender. Fez sentido iss
 ## Como estudar com essas aulas
 Acredito que não seja possível aprender a programar apenas lendo ou assistindo aulas. A prática e a repetição são indispensáveis. Então, a minha recomendação é: Mantenha essas aulas abertas no seu navegador e vá acompanhando os exemplos, executando-os em seu computador. Depois, tente modificar os exemplos um pouco e ver o que acontece. Por fim, tente fazer os exercícios propostos (se tiver algum). E, acima de tudo, não tenha medo de errar!
 
-Ao longo dos artigos vai haver blocos de código, como este:
+Ao longo dos artigos você irá ver blocos de código, como este:
 
 ```
 Exemplo de bloco de código
 ```
 
 Nesses blocos vão aparecer tanto trechos de código quanto comandos de terminal, ou mesmo os resultados de um comando. Estes serão nossos exemplos. Minha dica de aprendizado: **Escreva** os exemplos no seu computador, ao invés de copiar e colar. Confie em mim, isso vai ajudar bastante! ;D
+
+***
 
 # Nossa linguagem de programação: Python!
 

@@ -27,7 +27,7 @@ Digitando `1` pressionado a tecla <kbd>Enter</kbd>, teremos:
 1
 ```
 
-Isso significa que o valor do número 1 é 1. Isso é tão óbvio :)! Vamos tentar com outro número. Digitando `10.5`, qual será o valor?
+Isso significa que o valor do número `1` é `1`. Isso é tão óbvio :)! Vamos tentar com outro número. Digitando `10.5`, qual será o valor?
 
 ```python
 >>> 10.5
@@ -43,7 +43,7 @@ Um passo mais ousado:
 5.0
 ```
 
-Brinque um pouco com os números. _O que acontece se você tentar dividir por 0? Teste no seu terminal =)_
+Brinque um pouco com os números. _O que acontece se você tentar dividir por 0? Teste no seu terminal =)_ (repetido)
 
 Os dois primeiros valores, `1` e `10.5`, são exemplos de dois tipos principais de números em Python, um inteiro e um decimal. Assim como na Matemática, números como 1, 2, 200, -10 serão chamados de **inteiros**, denotados por `int`. Números decimais como 1.5, 2.3, 3.14159, -10.5, e outros números com decimais, serão chamados de **ponto flutuante**, denotados por `float`. 
 
