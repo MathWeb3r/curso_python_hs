@@ -197,7 +197,7 @@ False
 
 À primeira vista `None` pode parecer um tanto inútil, mas veremos na prática que ele é na verdade bastante útil em algumas situações.
 
-# Variáveis 
+# Apresentação des variáveis 
 
 Ainda existem outros tipos de dados em Python, por exemplo listas, tuplas, dicionários, conjuntos e etc. Mas antes de seguirmos em frente, vamos solidificar o que vimos até agora, criando nossas primeiras **variáveis**.
 

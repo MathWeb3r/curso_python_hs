@@ -56,9 +56,9 @@ Para melhorar ainda mais a nossa experiência, instale a [extensão Python](http
 
 Agora que já temos tudo pronto, podemos começar a estudar Python de verdade!
 
-## Interação com o usuário
+## Interação com o usuário (e um pouco mais em variáveis)
 
-Até agora apenas o computador falou com a gente, imprimindo palavras na tela por meio do `print()`. No entanto, como você já deve ter percebido, um programa não serve para muita coisa se não puder receber dados do usuário. Vamos fazer o computador conversar com o usuário (você!). Crie um novo arquivo, `chat.py`, execute esse programa e veja o que acontece no terminal (Na parte inferior da sua _IDE_):
+Até agora apenas o computador falou com a gente, imprimindo palavras na tela por meio do `print()`. No entanto, como você já deve ter percebido, um programa não serve para muita coisa se não puder receber dados do usuário. Vamos acabar com esse monólogo e fazer o computador conversar com o usuário (você!). Crie um novo arquivo, `chat.py`, execute esse programa e veja o que acontece no terminal (Na parte inferior da sua _IDE_):
 
 ```python
 print("Qual é o seu nome?")
@@ -69,6 +69,79 @@ print("Olá", nome)
 Reparou que após o `"Digite o seu nome: "` o cursor ficou piscando ou esperando você digitar alguma coisa?. Digite seu nome e pressione <kbd>Enter</kbd>. Você verá o programa imprimir "Olá" seguido do seu nome.
 
 ![Captura de tela do programa chat.py em execução no VS Code](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/3_ambiente_de_desenvolvimento/vscode_chat.png?raw=True)
+
+> Relembrando, ao testar o exemplos propostos, escreva o código, ao invés de copiar e colar! Sei que parece um pouco chato, mas faz toda a diferença ;)
+
+Entendendo esse programa: O `input()` é uma função _built-in_ que permite a entrada de dados num programa. Diferente da função `print()`, que apenas exibe informações na tela, a função `input()` **retorna** um valor, que é exatamente o texto digitado pelo usuário. Para guardar esse valor retornado por ela, nós fazemos a atribuição `nome = input()`, ou seja, a variável `nome` recebe o valor retornado pela função `input()`.
+
+Veja que o `input()` também imprime um texto no terminal. Você pode passar como **argumento** o que você quer que seja impresso na tela. Como você pode ter notado, uma função é escrita sempre com parênteses `()` no final (`print()`, `input()`, `type()`), a coisa que vai dentro dos parenteses é o que chamamos de **argumento**.
+
+Outro detalhe importante sobre o `input()`: ele sempre retorna um valor do tipo _string_, mesmo que você digite um número. Por exemplo, o que você espera que aconteça se escrevermos o próximo programa e o executarmos? Faça o teste.
+
+```python
+a = input('Escolha um número: ')
+b = input('Escolha outro número: ')
+resultado = a + b
+print('Resultado da soma: ', resultado)
+```
+E ai? Conseguiu executar a soma?...  Não?! :,(
+
+O que aconteceu foi uma **concatenação**, que é como se chama a "soma" de _strings_. Para que a soma acontesse da maneira matemática, seria preciso converter primeiro os nossos valores de _string_ para um tipo numério, como _inteiro_ ou _float_, e então soma-los. Lembre da última aula quando fizemos conversão de texto para número ([Tipos e variáveis](tipos_e_variaveis.md)), e tente pensar numa solução.
+
+Uma solução possível, é esta:
+
+```python
+a = input('Escolha um número: ')
+b = input('Escolha outro número: ')
+
+resultado = int(a) + int(b)
+print('Resultado da soma: ', resultado)
+
+# A e B, continuam sendo strings
+print('Tipo de a', type(a))
+print('Tipo de b', type(b))
+```
+
+No momento em que é feita a soma, estamos convertendo os valores de `a` e `b` para inteiros. Note que `a` e `b` continuam sendo strings, pois não houve nenhuma atribuição com `a` ou `b`, quem recebeu o valor da soma foi a variável `resultado`.
+
+Outra maneira, seria assim:
+
+```python
+a = input('Escolha um número: ')
+b = input('Escolha outro número: ')
+
+a = int(a)
+b = int(b)
+
+resultado = a + b
+print('Resultado da soma: ', resultado)
+
+# A e B, foram convertidas para inteiro
+print('Tipo de a', type(a))
+print('Tipo de b', type(b))
+```
+
+Aqui já acontece algo que pode parecer um pouco estranho. No _statement_ `a = int(a)`, a variável `a` recebe o valor de `int(a)`, isto é, uma variável recebe um valor que depende de si mesma. Isso é completamente válido em Python, e veremos no próximo capítulo o quão útil isso pode ser. 
+
+Uma forma ainda mais concisa de escrever o código acima seria:
+
+```python
+a = int(input('Escolha um número: '))
+b = int(input('Escolha outro número: '))
+
+resultado = a + b
+print('Resultado da soma: ', resultado)
+
+# A e B, foram convertidas para inteiro
+print('Tipo de a', type(a))
+print('Tipo de b', type(b))
+```
+
+Aqui vemos uma forma interessante de usar funções, passando uma função como argumento de outra função. Isto é, dentro dos parenteses de uma função, escrevemos outra função, por exemplo `int(input())`. Neste caso, a função de dentro, `input()` é executada primeiro, e então o valor que ela retorna é passado para função de fora `int()`.
+
+Nesses últimos programas, exploramos diferentes maneiras de se obter o mesmo resultado. De fato, você verá que existem inúmeras maneiras de se fazer a mesma coisa em Python. Trouxe esses 3 exemplos, pois eles ilustram um pouco algum cenários que podemos discutir um pouco sobre variáveis e funções. É claro, isso é só um pedacinho, e se alguma dessas coisas ainda não ficou claro, não se preocupe, pois voltaremos a falar de tudo isso novamente em próximas aulas. Apenas trouxe esses exemplos, pois na próxima aulas a função `input()` será útil para nós.Porém, por agora, continue explorando o que escrevemos aqui, brinque um pouco com as possibilidades do `input()`.  
+
+## Exercícios
 
 ## Apêndice: Guia de Instalação do VS Code
 
