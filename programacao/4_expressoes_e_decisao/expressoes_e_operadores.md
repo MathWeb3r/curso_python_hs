@@ -246,3 +246,21 @@ True
 
 A pergunta que o `or`faz é "10 é maior que 5 **ou** 2 é maior que 3?". No caso, a primeira parte é verdadeira, logo, o resultado é verdadeiro. O resultado só será falso, se ambas afirmações forem falsas. 
 
+O ultimo operador é o `not` (NÃO). Ele é usado para inverter o valor de uma expressão booleana. Vejamos:
+
+```python
+>>> not True
+False
+>>> not False
+True
+```
+
+Agora, vamos verificar a expressão abaixo:
+
+```python
+>>> not 10 > 5
+False
+```
+
+A pergunta que o `not`faz é "não é verdade que 10 é maior que 5?". No caso, a primeira parte é verdadeira, logo, o resultado é falso. 
+
