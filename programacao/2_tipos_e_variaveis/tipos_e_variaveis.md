@@ -231,20 +231,20 @@ Podemos verificar o tipo desta variável usando a função `type()`:
 Ao mesmo tempo, podemos reatribuir um novo valor à variável `gravidade`, e o Python irá atualizar o valor armazenado nela. Digamos que vamos para a lua.
 
 ```python
->>>gravidade = 1.62
+>>> gravidade = 1.62
 ```
 
 Ao verificar o valor de `gravidade` novamente, veremos:
 
 ```python
->>>gravidade
+>>> gravidade
 1.62
 ```
 
 Agora algo mais impressionante, o que essa instrução deve produzir?
 
 ```python
->>>gravidade = "Muito Alta"
+>>> gravidade = "Muito Alta"
 ```
 
 A resposta:
@@ -258,9 +258,34 @@ A resposta:
 
 Perceba que o Python não reclamou da atribuição de um valor **string** para uma variável que antes armazenava um **float**. Python é uma linguagem de **tipagem dinâmica**, o que significa que uma variável pode armazenar diferentes tipos de dados ao longo do tempo. 
 
-> ⚠️ Isso é diferente de linguagens de **tipagem estática**, onde uma variável deve armazenar sempre o mesmo tipo de dado. 
+> Isso é diferente de linguagens de _tipagem estática_, onde uma variável deve armazenar sempre o mesmo tipo de dado. 
 >
 >Quem sabe um dia o HackerSpace crie um curso de C++ ou Java. ¯\\_(ツ)_/¯
+
+### Reatribuição
+
+Vamos criar uma outra variável para armazenar um número, digamos, bananas (pode rir, eu também achei graça quando li isso em algum lugar), e vamos atribuir o valor `10`.
+
+```python
+>>> bananas = 10
+```
+
+Agora vamos atribuir um novo valor à `bananas`. 
+
+```
+>>> bananas = bananas + 1
+```
+
+O que você acha que irá acontecer? Vamos ver o que há no nosso baú de bananas:
+
+```python
+>>> bananas
+11
+```
+
+Nós atualizamos o valor da variável `bananas` a partir do seu próprio valor, `bananas = bananas + 1`. Isso funciona e é na verdade muito comum em programação. O que acontece é que, quando o programa executa essa instrução, a expressão `bananas + 1` é calculada _primeiro_, e a atribuição é feita só _depois_. Portanto, `bananas + 1` é calculado utilizando o valor de `bananas` _antes_ da reatribuição. 
+
+> De fato, isso vale para _qualquer_ expressão, não apenas a soma. Haverá uma aula apenas sobre expressões.
 
 ## Algumas regrinhas para nomear variáveis
 
