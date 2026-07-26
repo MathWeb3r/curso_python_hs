@@ -228,7 +228,7 @@ False
 
 Do lado direito, temos `10 > 5` que é verdade e `2 > 3` que é falso. O que o operador `and` faz é perguntar, neste caso, "10 é maior que 5 **e** 2 é maior que 3?" Como a segunda parte é falsa, o resultado final é falso.
 
-Já o operador `or` (OU), precisa que apenas uma das partes seja verdadeira. Vejamos:
+Já o operador `or` (OU), precisa que apenas uma das partes seja verdadeira para retornar `True`. Vejamos:
 
 ```python
 >>> True or False
@@ -261,6 +261,4 @@ Agora, vamos verificar a expressão abaixo:
 >>> not 10 > 5
 False
 ```
-
-A pergunta que o `not`faz é "não é verdade que 10 é maior que 5?". No caso, a primeira parte é verdadeira, logo, o resultado é falso. 
 
