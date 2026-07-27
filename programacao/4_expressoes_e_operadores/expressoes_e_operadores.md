@@ -15,7 +15,7 @@ Nesta aula, veremos todos os principais tipos de **operadores** do Python.
 
 As expressões matemáticas em Python são feitas com operadores aritméticos e acredito que seu funcionamento é bem intuitivo, por motivos que irei explicar. Os operadores são exatamente os mesmos que vemos na matemática básica. Porém, melhor do que falar, é fazer!
 
-Vamos abrir o Python pelo nosso terminal e testar algumas operações (_Veja a aula [Olá Mundo!](hello_world.md_) para saber como acessá-lo). A começar pela nossa conhecida (e querida) soma, feita com o símbolo `+`:
+Vamos abrir o Python pelo nosso terminal e testar algumas operações (_Veja a aula [Olá Mundo!](hello_world.md) para saber como acessá-lo_). A começar pela nossa conhecida (e querida) soma, feita com o símbolo `+`:
 
 ```python
 >>> 2 + 3
