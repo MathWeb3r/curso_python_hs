@@ -15,7 +15,7 @@ Nesta aula, veremos todos os principais tipos de **operadores** do Python.
 
 As expressões matemáticas em Python são feitas com operadores aritméticos e acredito que seu funcionamento é bem intuitivo, por motivos que irei explicar. Os operadores são exatamente os mesmos que vemos na matemática básica. Porém, melhor do que falar, é fazer!
 
-Vamos abrir o Python pelo nosso terminal e testar algumas operações (_Veja a aula [Olá Mundo!](hello_world.md) para saber como acessá-lo). A começar pela nossa conhecida (e querida) soma, feita com o símbolo `+`:
+Vamos abrir o Python pelo nosso terminal e testar algumas operações (_Veja a aula [Olá Mundo!](hello_world.md_) para saber como acessá-lo). A começar pela nossa conhecida (e querida) soma, feita com o símbolo `+`:
 
 ```python
 >>> 2 + 3
@@ -70,7 +70,7 @@ Da mesma forma, o operador `%` retorna o **resto** da divisão entre dois inteir
 
 Uma maneira fácil de visualizar os operadores `//` e `%` é pensar na divisão como nós aprendemos na escolinha. Por exemplo, para fazer a divisão de `11` por `4`, como costumávamos fazer? Primeiro multiplicamos o `4` por algum número inteiro até que o valor seja próximo, mas menor que `11`. Nesse caso, multiplicamos `4` por `2` para obter `8`. Esse `2` é o quociente, ou seja, o resultado da divisão inteira - o operador `//` em Python. O resto é o dividendo `11` menos o produto do quociente pelo divisor, ou seja, `11 - 8 = 3`. O operador `%` em Python retorna exatamente esse resto. Veja no (lindo) esquema abaixo: 
 
-![divisao_11_por_4](divisao.svg)
+![https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/4_expressoes_e_operadores/divisao_11_por_4?raw=True](divisao.svg)
 
 > O `%` é frequentemente chamado de operador **módulo**.
 
