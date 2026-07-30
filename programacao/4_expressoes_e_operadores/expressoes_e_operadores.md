@@ -70,7 +70,7 @@ Da mesma forma, o operador `%` retorna o **resto** da divisão entre dois inteir
 
 Uma maneira fácil de visualizar os operadores `//` e `%` é pensar na divisão como nós aprendemos na escolinha. Por exemplo, para fazer a divisão de `11` por `4`, como costumávamos fazer? Primeiro multiplicamos o `4` por algum número inteiro até que o valor seja próximo, mas menor que `11`. Nesse caso, multiplicamos `4` por `2` para obter `8`. Esse `2` é o quociente, ou seja, o resultado da divisão inteira - o operador `//` em Python. O resto é o dividendo `11` menos o produto do quociente pelo divisor, ou seja, `11 - 8 = 3`. O operador `%` em Python retorna exatamente esse resto. Veja no (lindo) esquema abaixo: 
 
-![https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/4_expressoes_e_operadores/divisao_11_por_4?raw=True](divisao.svg)
+![Imagem: Divisão feita do método manual](https://github.com/MathWeb3r/curso_python_hs/blob/main/programacao/4_expressoes_e_operadores/divisao.svg?raw=True)
 
 > O `%` é frequentemente chamado de operador **módulo**.
 
