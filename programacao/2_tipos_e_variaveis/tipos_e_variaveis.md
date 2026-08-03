@@ -77,6 +77,17 @@ Podemos converter um tipo em outro. Por exemplo, podemos converter um inteiro em
 
 > Note que ao converter um número real para um número inteiro, a parte decimal é perdida. Chamamos isso de **Truncar**.
 
+Mais um exemplo, não se preocupe com a notação que estou usando, iremos abordar isso no futuro. O foco aqui é discutir o resultado que veremos:
+
+```python
+>>> f"{10 / 3:.20f}"
+'1.66666666666666674068'
+```
+
+Basicamente estou pedindo pro Python me mostrar o resultado da divisão de 10 por 3, com 20 casas decimais. O que esperariamos, matematicamente, é uma dízima periódica 1.666666666... até o infinito. Porém não existe infinito para o computador, os números são armazenados com uma _precisão finita_, isto é, eles são apenas uma aproximação. Essa é uma noção importante que diferencia a matemática que a conhecemos para a matemática realizada pelo computador. 
+
+Para esse curso (e para grande maioria dos casos) isso não será um problema, então não se preocupe! 
+
 ## Booleanos
 
 Outros tipos de dados muito importantes são os **booleanos**, que representam os valores verdadeiros ou falsos, denotados por `bool`. Um dado booleano pode assumir dois valores, `True` ou `False` (Verdadeiro ou Falso). O booleano é uma unidade fundamental na computação, pois é a base para a tomada de decisão em programas de computador.
@@ -305,6 +316,55 @@ Se por acaso você não seguir essas regras o Python pode não gerar um erro de 
 
 > Vamos seguir boas práticas durante o curso :). Umas delas é o PEP 8, um guia de estilo que define como o código Python deve ser escrito. Dentre as recomendações, usaremos o **snake_case** (tudo minúsculo com underscores separando as palavras) para nomear variáveis e funções. Por exemplo, escrevemos `bolo_de_cenoura` e não `boloDeCenoura`.
 
+## F-Strings
+
+Em vários momentos iremos precisar combinar o valor de nossas variáveis com algum texto. Como já vimos, podemos concatenar strings, mas isso exige converter tipos de dados diferentes para strings. 
+
+```python
+>>> contagem = 43
+>>> "Derrotei " + str(contagem) + " Orcs na batalha!"
+'Derrotei 43 Orcs na batalha!'
+```
+
+Mas existe uma maneira mais simples (e elegante) de fazer isso, que são as _strings formatadas_ ou **F-Strings**. Elas são escritas da seguinte maneira:
+
+```python
+>>> contagem = 43
+>>> f"Derrotei {contagem} Orcs na batalha!"
+'Derrotei 43 Orcs na batalha!'
+```
+
+Escrevemos a string com um `f` antes das aspas, e então podemos colocar variáveis dentro de chaves `{}`. O Python irá substituir o conteúdo das chaves pelo valor da variável. Podemos inserir várias variáveis em uma única f-string.
+
+```python
+>>> velocidade = 100
+>>> km_por_h = velocidade / 3.6
+>>> f"Estamos viajando à {velocidade} m/s. Isto é {km_por_h} km/h!"
+'Estamos viajando à 100 m/s. Isto é 27.77777777777778 km/h!'
+```
+
+> UAU. Quantas casas decimais esse número tem? 
+
+Podemos formatar os nossos números dentro das _f-strings_ para que eles fiquem mais apresentáveis. Para controlar o número de casas decimais que serão exibidas, fazemos da seguinte maneira:
+
+```python
+>>> f"Estamos viajando à {velocidade:.1f} m/s. Isto é {km_por_h:.2f} km/h!"
+'Estamos viajando à 100.0 m/s. Isto é 27.78 km/h!'
+```
+
+O _modificador_ `:.2f` diz ao Python para formatar o número como um float com 2 casas decimais (Note que ele arredonda automaticamente o valor). Da mesma forma `:.1f` formata o número como um float com 1 casa decimal.
+
+> [atencao] O valor dentro da variável continua float, o que muda é apenas a forma como ele é apresentado.  
+
+Existem outras maneiras de combinar strings e variáveis além das f-strings, mas elas são mais verbosas e menos elegantes. O tópico sobre formatação de strings é conteúdo para uma aula inteira (ou mais), mas com o que vimos aqui já conseguimos fazer o que precisamos.
+
+>[nota] O Python 3.6 introduziu as f-strings, e desde então elas se tornaram a maneira recomendada de combinar strings e variáveis.
+
+
+
+## Próximos passos
+
 Acredito que a partir desse ponto, já consolidamos o **conhecimento básico** necessário para começarmos a desenvolver nossos primeiros programas. Caso alguma informação não tenha ficado clara, você pode ler novamente ou consultar o [Conteúdo de apoio](#). A verdade é que os conceitos apresentados aqui serão repetidos diversas vezes ao longo das aulas, e os possíveis _gaps_ serão preenchidos com o tempo. Com isso, o próximo passo já é colocar a **mão na massa** e começar a **criar programas**!
 
 > "A imaginação é mais importante que o conhecimento. O conhecimento é limitado, ao passo que a imaginação abrange o mundo inteiro." - Albert Einstein
+

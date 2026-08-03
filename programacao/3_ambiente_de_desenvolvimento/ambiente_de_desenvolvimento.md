@@ -1,6 +1,8 @@
 # Ambiente de Desenvolvimento
 
-> "quote" - alguém
+> "This is the construct. It’s our loading program. We can load anything from clothing, to equipment, weapons, training simulations, anything we need." - Morpheus
+>
+> "Right now we’re inside a computer program?" - Neo
 
 Até agora nossos programas tiveram apenas uma linha de código. Por incrível que pareça, aqueles comandos no terminal são por si sós pequenos programas em Python. Na verdade, um programa nada mais é do que uma coleção de comandos em sequência. 
 
