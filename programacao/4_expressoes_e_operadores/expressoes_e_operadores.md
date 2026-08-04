@@ -5,7 +5,7 @@ Inicialmente pensei em fazê-lo junto com if/else, mas talvez seja muita coisa p
 
 -->
 
-> " " - alguém
+> "There is no sense crying over every mistake. You just keep on trying till you run out of cake." — GLaDOS
 
 Chegamos agora em um assunto onde as coisas começam a ficar bem interessantes. Vamos introduzir os conceitos de **expressões**. Na verdade, você já criou várias expressões em outras aulas, como por exemplo: `1 + 2`. A soma `1 + 2` é uma expressão simples que usa o **operador** `+`. Na verdade, qualquer operação matemática é um tipo de expressão que usa um **operador aritmético** para combinar dois valores. 
 
