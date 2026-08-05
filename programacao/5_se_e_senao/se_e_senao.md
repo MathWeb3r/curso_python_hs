@@ -161,7 +161,7 @@ Note que essa linha está **indentada**, ou seja, ela está deslocada para a dir
 ## Senão
 Se você mudar o valor de `idade` para 15? A condição não será satisfeita, e nada irá acontecer. Teste!
 
-Para contornar isso, podemos adicionar um `else`, que significa "senão" em inglês. Por exemplo:
+Para contornar isso, podemos adicionar um **`else`**, que significa "senão" em inglês. Por exemplo:
 
 ```python {.line-numbers}
 idade = 15
@@ -326,7 +326,150 @@ else:
 print(f"O valor final do ingresso é: R$ {preco:.2f}")
 ```
 
-Você pode testar aí
+Você pode testar aí outras entradas, e conferir se o programa funciona corretamente. Por exemplo, ao digitar "quarta feira", você pode reparar que o programa não vai aplicar o desconto. Isso por que a string "quarta feira" é diferente de "quarta-feira", e isso vai fazer que a expressão `dia == "quarta-feira"`seja falsa. Para que duas `str` sejam iguais, precisam ter exatamente os mesmos caracteres, na mesma ordem e com a mesma case (maiúsculo/minúsculo). O mesmo vale para a expressão `estudante == "sim"`.
+
+> Após estudarmos todas estruturas de decisão, loops e tipos de dados, vamos apresentar um pouco métodos para fazer a correção de entradas e validações de dados. O que chamamos de **higiene de código**.
+
+## Elif - Senão, se
+
+Além dos `if` aninhados, existe uma outra maneira de fazer mais de duas (ou mais) verificações. Usaremos o **`elif`**. Pensamos nisso como um `else` combinado com um `if`. Vamos esclacerer seu funcionamento com um exemplo.
 
 ### Exemplo 4:
-Hora do almoço
+
+Vamos criar um programa que recebe um horário (Um inteiro entre 0 e 23) e deve dizer qual período do dia corresponde aquele horário. Vamos definir que até as 12h é **manhã**, das 12h até as 18h é **tarde**, e após as 18h é **noite**. 
+
+```python {.line-numbers}
+hora = int(input("Digite a hora: "))
+
+# 1. Verifica se a hora é menor que 12
+if hora < 12:
+    print("Bom dia!")
+# 2. Se não for menor que 12, verifica se é menor que 18
+elif hora >= 12 and hora < 18:
+    print("Boa tarde!")
+# 3. Se não for nenhuma das anteriores, é noite
+else:
+    print("Boa noite!")
+```
+
+### Entendendo o exemplo:
+
+O que estamos fazendo aqui é encadeando tomadas de decisão. O que o Python faz é verificar a primeira expressão (linha 3), `hora < 12` e caso seja verdadeira, executa o `print("Bom dia!")`. Caso contrário, ele pula os comandos do `if`, e verifica a segunda expressão (linha 7), `hora >= 12 and hora < 18`. Se a expressão for verdadeira, executa o `print("Boa tarde!")`. Caso contrário, se ambos `if` e `elif` forem falsos, ele executa o `else` (linha 10). 
+
+> Veja que a indentação do `elif` e do `else` é a mesma, o que significa que ambos estão no mesmo nível de decisão.
+
+Podemos ler esse código como "**Se** a hora for menor que 12, imprima Bom dia. **Senão, se** a hora for maior ou igual a 12 _e_ menor que 18, imprima Boa tarde. **Senão**, imprima Boa noite.".
+
+O seguinte fluxograma corresponde à esse código:
+
+```mermaid
+flowchart TD
+    A([Digite a hora]) --> B{Hora < 12?}
+    B -->|Sim| C[Imprima 'Bom dia']
+    B -->|Não| D{Hora >= 12 and Hora < 18?}
+    D -->|Sim| E[Imprima 'Boa tarde']
+    D -->|Não| F[Imprima 'Boa noite']
+```
+
+### Exemplo 5: (Continuar o exemplo para depois usar algo com mais elif)
+
+Vamos criar um programa que verifica se um aluno foi aprovado, reprovado ou está em recuperação. Para isso, o programa deve receber como entrada o valor de 3 notas do aluno, que são números `float` entre 0 e 10. Como o professor é rigoroso que o critério da média é:
+
+- Notas entre 0 e 5 são reprovadas
+- Notas entre 5 e 7 estão em recuperação (5 incluso).
+- Notas entre 7 e 10 estão aprovadas (7 incluso)
+
+A média final é a média simples entre as 3 notas. Como ficaria esse programa?
+
+```python {.line-numbers}
+# Recebe as três notas
+nota_1 = float(input("Digite a nota 1: "))
+nota_2 = float(input("Digite a nota 2: "))
+nota_3 = float(input("Digite a nota 3: "))
+
+# Calculamos a média
+media = (nota_1 + nota_2 + nota_3) / 3
+
+# Verifica o status do aluno
+if media < 5:
+    print("Reprovado!")
+elif media >= 5 and media < 7:
+    print("Recuperação!")
+else:
+    print("Aprovado!")
+```
+
+Repare, que da maneira que o problema foi elaborado, poderiamos ter feito de outra forma, mudando a expresssão do `elif`, como no exemplo abaixo:
+
+```python {.line-numbers}
+# Recebe as três notas
+nota_1 = float(input("Digite a nota 1: "))
+nota_2 = float(input("Digite a nota 2: "))
+nota_3 = float(input("Digite a nota 3: "))
+
+# Calculamos a média
+media = (nota_1 + nota_2 + nota_3) / 3
+
+# Verifica o status do aluno
+if media < 5:
+    print("Reprovado!")
+# Alteração na expressão
+elif media < 7:
+    print("Recuperação!")
+else:
+    print("Aprovado!")
+```
+
+Esse código gera exatamente o mesmo resultado. O que mudou foi apenas a expressão do `elif`. A médias que são menores que 5, já foram tratadas pelo `if`. Portanto não precisamos verificar novamente se a média é maior ou igual a 5. Se o programa chegou até a linha 9, sabemos que a média é  maior ou igual a 5, e só precisamos verificar se é menor que 7.  
+
+> [dica] Como já comentei antes, podemos escrever vários programas que fazem a mesma coisa, e que produzem o mesmo resultado. Muitas vezes a diferenteça entre eles é a clareza do que está sendo feito ali. Você vai se deparar com essas situações ao longo da jornada e vai ter que tomar decisões sobre qual a melhor forma de implementar uma solução. As vezes você terá que escolher entre usar mais `if` e `elif` ou usar `if` aninhado, depende da situação. Em linhas gerais, quando não estamos interessados em otimização de tempo e memória, eu diria que: _Um bom código é aquele que é legível, e não aquele que tem menos linhas_ ;)
+
+## Voltando as expressões lógicas
+
+Como você reparou, o que determina a condição de um `if` é uma **expressão**, como aquelas que vimos na [Aula 4](./aula_4_operadores.md). Operadores comparativas, como `==`, `>`, `<=`, `!=`, etc. Operadores lógicos como `and`, `or`, `not`, etc. Em geral, a estruta de um mais simples de um `if` é:
+
+```python {.line-numbers}
+if <expressao lógica>:
+    <bloco de codigo>
+```
+
+Mas essas não são as únicas formas de se criar condições. A expressão pode ser qualquer coisa que retorne um valor booleano. Vamos ver outros exemplos abaixo. 
+
+### Exemplo 6:
+
+Verificando se um número é divisível por outro. Podemos dizer que um número inteiro é divisível por outro, se o resto da sua divisão for 0. Por exemplo, 4 é divisível por 2, pois 4 ÷ 2 = 2 e resto igual 0. Podemos fazer o seguinte código:
+
+```python {.line-numbers}
+numero = int(input("Digite o número: "))
+divisor = int(input("Digite o divisor: "))
+
+# calcula o resto da divisão inteira
+resto = numero % divisor
+
+# verifica se o resto é zero 
+# lembrando que 0 em Python é "Falso"
+# e qualquer outro inteiro é "Verdadeiro"
+# o not inverte isso!
+if resto:
+    print(f"{numero} não é divisível por {divisor}")
+    print(f"O resto da divisão de {numero} por {divisor} é {resto}") 
+else:
+    print(f"{numero} é divisível por {divisor}")
+```
+
+Vamos lembrar que em Python, o número 0, é `False`. Por outro lado, qualquer outro inteiro é `True`. Isso é, o tipo `bool` é um subtipo do `int`. 
+
+### Exemplo 7:
+
+Em python uma string vazia "" é avaliada como `False` e qualquer outra string é avaliada como `True`.
+
+```python {.line-numbers}
+nome = input("Digite seu nome: ")
+
+if nome:
+    print(f"Olá {nome}!")
+else:
+    print("Olá anônimo!")
+``` 
+
+> O mesmo vale para qualquer tipo iterável vazio. Como listas, tuplas, dicionários. Vamos ver esses tipos em breve :)

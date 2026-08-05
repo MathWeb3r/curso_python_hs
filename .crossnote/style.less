@@ -1,86 +1,8 @@
+
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
 .markdown-preview.markdown-preview {
-  /* Suporte e estilização de número de linhas nos blocos de código (Prism / Markdown Preview Enhanced) */
-  pre.line-numbers,
-  pre[class*="language-"].line-numbers,
-  code[class*="language-"].line-numbers {
-    position: relative !important;
-    padding-left: 3.8em !important;
-    counter-reset: linenumber;
-  }
-
-  pre.line-numbers > code,
-  pre[class*="language-"].line-numbers > code {
-    position: relative !important;
-    white-space: inherit;
-  }
-
-  .line-numbers .line-numbers-rows {
-    position: absolute !important;
-    pointer-events: none !important;
-    top: 0 !important;
-    left: -3.8em !important;
-    width: 3em !important;
-    letter-spacing: -1px;
-    border-right: 1px solid rgba(150, 150, 150, 0.3) !important;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  pre.line-numbers > .line-numbers-rows {
-    left: 0 !important;
-  }
-
-  .line-numbers-rows > span {
-    display: block !important;
-    counter-increment: linenumber;
-  }
-
-  .line-numbers-rows > span::before {
-    content: counter(linenumber);
-    color: #888888;
-    display: block !important;
-    padding-right: 0.8em !important;
-    text-align: right !important;
-  }
-
-  /* Guia Visual de Indentação Estilo VS Code (.indent) */
-  pre.indent,
-  pre[class*="language-"].indent {
-    tab-size: 4;
-    -moz-tab-size: 4;
-
-    > code,
-    code {
-      display: block !important;
-      width: 100% !important;
-    }
-
-    .indent-guide {
-      display: inline-block;
-      position: relative;
-      white-space: pre;
-      pointer-events: none;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    .indent-guide::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 1px;
-      background-color: rgba(135, 135, 135, 0.4) !important; /* Linha vertical guia no início da indentação */
-    }
-
-    .indent-guide:hover::before {
-      background-color: rgba(60, 140, 240, 0.8) !important;
-    }
-  }
+  // modify your style here
+  // eg: background-color: blue;
 }

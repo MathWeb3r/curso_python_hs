@@ -23,6 +23,7 @@ graph TD
 - [ ] Diagramas/Fluxogramas bonitos
 - [ ] Rotina/Algoritimo/Programa é a mesam coisa
 - [ ] Incremento e Decremento
+- [ ] != 
 
 ## Aula 1
 - O que é Programação?
