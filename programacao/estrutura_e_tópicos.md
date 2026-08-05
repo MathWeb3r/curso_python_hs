@@ -7,10 +7,22 @@ graph TD
 ```
 
 
-Tópicos ainda apresentados (nao sei onde encaixar):
+## Tópicos ainda apresentados (nao sei onde encaixar):
 - Formatação de String
 - List Comprehension
 - Como lidar com erros (try/except)
+
+## TODO
+- [ ] Fazer um resumo da aula no começo
+    "Nessa aula vamos ver... depois... "
+- [ ] Mais explicações sobre coisas anteriores à IDE
+    - [ ] Como funciona o computador de forma simplificada
+    - [ ] Pastas
+    - [ ] Arquivos
+    - [ ] Criar pasta e Arquivo
+- [ ] Diagramas/Fluxogramas bonitos
+- [ ] Rotina/Algoritimo/Programa é a mesam coisa
+- [ ] Incremento e Decremento
 
 ## Aula 1
 - O que é Programação?

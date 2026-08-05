@@ -137,3 +137,196 @@ A ideia aqui não é que você entenda completamente como construir um algoritim
 
 ## Tomada de Decisão 
 
+A primeira estrutura que vamos estudar será a **tomada de decisão** . Em Python, essa estrutura é feita com a palavra reservada `if`, que significa "SE" em inglês. Vamos ver um exemplo:
+
+```python
+idade = 20
+
+if idade >= 18:
+    print("Você é maior de idade")
+```
+
+Essa é a construção básica de um `if`. Lemos essa estrutura como _"**Se** a variável `idade` for maior ou igual à 18, vamos imprimir na tela que você é maior de idade"_. 
+
+### Entendendo a estrutura: 
+
+Na linha 3, temos a palavra reservada `if`, seguida de uma expressão condicional `idade >= 18`, seguida de dois pontos `:`. Aqui definimos a condição que precisa ser verdadeira para que algo seja feito.
+
+Nas linhas após a linha 3, escrevemos os comandos que vão ser feito **se** a condição for verdade. Nesse caso há apenas um, `print("Você é maior de idade")`. 
+
+Note que essa linha está **indentada**, ou seja, ela está deslocada para a direita. Fazemos isso pressionando <kbd>Tab</kbd>. O Python vai entender tudo que estiver _indentado_ como pertencente ao `if`.
+
+> Costumamos dizer que as linhas indentadas estão _dentro_ do `if`.
+
+## Senão
+Se você mudar o valor de `idade` para 15? A condição não será satisfeita, e nada irá acontecer. Teste!
+
+Para contornar isso, podemos adicionar um `else`, que significa "senão" em inglês. Por exemplo:
+
+```python {.line-numbers}
+idade = 15
+
+if idade >= 18:
+    print("Você é maior de idade")
+else:
+    print("Você é menor de idade!")
+```
+
+Agora temos uma estrutura de **se** e **senão**, `if`/`else`. Podemos ler essa estrutura como _"**Se** `idade` for maior ou igual à 18, imprima na tela que você é maior de idade, **senão**, imprima na tela que você é menor de idade"_.
+
+### Entendendo o exemplo: 
+O Python percorre a linha 3, verifica a condição do `if`, neste caso `idade >= 18`. Mas como 15 não é maior ou igual a 18, a expressão é falsa. Aí o Python ignora tudo que está indentado após o `if`, e executa as linhas indentadas após o `else`.
+
+> Eu estou falando aqui "O Python faz isso.., faz aquilo...", como se fosse alguém lendo o código. Na verdade quem faz isso é o _compilador_. O compilador é um programa que vai executando o código linha a linha em tempo real, quando rodamos o nosso programa. Isso é o que define Python como uma **Linguagem Interpretada**
+
+Vamos criar alguns programas exemplos, para aplicar nosso novo conhecimento.
+
+### Exemplo 1:
+
+Vamos fazer um programa que calcula a raiz quadrada de um número, mas se esse número for negativo, o programa deve imprimir uma mensagem dizendo que não é possível calcular a raiz quadrada de um número negativo. 
+
+Um esquema para esse algoritimo seria:
+
+```mermaid
+flowchart TD
+    A([Digite um número])
+    B{O número é\nnegativo?}
+    C([Imprima a raiz quadrada])
+    D([Imprima uma mensagem de erro])
+    
+    A --> B
+    B -->|Sim| D
+    B -->|Não| C
+```
+
+O usuário irá digitar o número, então usaremos `input()`. Como o `input()` retorna uma `str` precisamos converter para um _inteiro_ usando `int()`. Depois deve haver uma condição que verifica _se_ o número é positivo. _Se_ for devemos calcular a sua raiz quadrada e imprimi-lá, _senão_ devemos imprimir uma mensagem. 
+
+O código ficaria assim:
+
+```python {.line-numbers}
+numero = int(input("Digite um número: "))
+
+if numero >= 0:
+    raiz = numero ** 0.5
+    print(f"A raiz quadrada de {numero} é {raiz}")
+else:
+    print("Não existe raiz quadrada para número negativo")
+```
+
+### Exemplo 2: 
+
+Para brincar na montanha russa do parque, você precisa ter pelo menos 1,30m de altura, e ter mais que 12 anos. Vamos escrever um programa que verifica se a pessoa pode ou não brincar na montanha russa, pedindo para o usuário que digite sua altura em metros, e sua idade.
+
+O nosso algoritimo deve ser assim:
+
+```mermaid
+flowchart TD
+    A([Digite o tamanho e idade])
+    B{A idade é maior\nque 12 anos?}
+    C{A altura é maior\nque 1,30m?}
+    D["Você não é alto suficiente"]
+    E["Você é novo demais"]
+    F["Liberado"]
+
+    A --> B
+    B -->|Não| D
+    B -->|Sim| C
+    C -->|Não| E
+    C -->|Sim| F
+```
+
+Aqui temos que fazer duas tomadas de decisão, a primeira é se a pessoa tem idade suficiente, caso não tenha já podemos encerrar o programa. Agora caso a pessoa tenha idade suficiente, precisamos verificar se a pessoa tem altura suficiente. 
+
+Vamos ver como fica no Python:
+
+```python {.line-numbers .indent}
+idade = int(input("Digite sua idade: "))
+altura = float(input("Digite sua altura em metros: "))
+
+# Verifica primeiro a idade 
+if idade > 12:
+    # Se a idade é maior que 12, verifica a altura
+    if altura > 1.30: 
+        print("Liberado!")
+    else:
+        print("Você não é alto suficiente")
+
+# Se a idade não for maior que 12, executa o else
+else:
+    print("Você é novo demais")
+```
+
+O que estamos fazendo aqui é são `if` **aninhados**, isto é, um `if` dentro de outro `if`. O `if` de fora, é responsável pela decisão da idade, já o `if` de dentro é responsável pela decisão da altura. 
+
+
+Repare que a quantidade de indentações define, em Python, como cada instrução está dentro de outra. O `if altura > 1.30:` está indentado 1 vez (1 $\times$ <kbd>Tab</kbd>). O `print("Liberado!")` está dentro desse `if`, então ele é indentado 2 vezes (2 $\times$ <kbd>Tab</kbd>). 
+
+O `else` (linha 7) que corresponde ao `if altura > 1.30:`, deve ter a mesma quantidade de indentações que o `if` ao qual ele pertence, neste caso 1 $\times$ <kbd>Tab</kbd>. Estou enfatizando esse questão da indetenação, pois no Python isso não é apenas uma prática de organização, é uma regra de sintaxe. Se não escrevemos com a quantidades corretas de indentações o Python não vai entender.
+
+
+> **Na sua IDE:**
+>
+> Se você estiver no VS Code, pode usar o atalho <kbd>Tab</kbd> para indentar, e <kbd>Shift</kbd> + <kbd>Tab</kbd> para desindentar. Repare que o VS Code desenha linhas retas entre as linhas de código com a mesma indentação.
+>
+>!["Código no VSCode"](vscode_indent.png)
+>
+
+### Exemplo 3: 
+Existe um cinema onde o valor do ingresso inteiro é R\$40. Estudantes pagam apenas metade do valor inteiro, isto é R\$20. Porém há um desconto nas **quartas-feiras** de 20% em ingressos inteiros, e 10% em ingressos de estudantes. Vamos fazer um programa que recebe o dia da semana, e se a pessoa é estudante, calcula o valor final do ingresso.
+
+```mermaid
+flowchart TD
+    A([Digite o dia e se é estudante])
+    val[Define Preço = 40]
+    B{É estudante?}
+    C{É quarta-feira?}
+    C2{É quarte-feira?}
+    met[Calcula Metade do Preço]
+    d1[Adiciona 20% no desconto]
+    d2[Adiciona 10% no desconto]
+    desc[Mantem desconto em 0%]
+    desc2[Mantem desconto em 0%]
+    prec([Imprime Preço Final])
+
+    A --> val
+    val --> B
+    B -->|Não| C
+    B -->|Sim| met
+
+
+    C -->|Não| desc
+    C -->|Sim| d1
+
+    met --> C2
+    C2 -- Sim --> d2
+    C2 -- Não --> desc2
+    
+    desc --> prec
+    d1 --> prec
+    d2 --> prec
+    desc2 --> prec
+```
+
+Um código que faz esse algoritimo seria:
+
+```python {.line-numbers .indent}
+dia = input("Digite o dia da semana: ")
+estudante = input("Você é estudante? (sim/nao): ")
+
+preco = 40.0
+
+if estudante == "sim":
+    preco = preco / 2  # Calcula Metade do Preço (R$ 20.0)
+    if dia == "quarta-feira":
+        preco = preco * 0.90  # Adiciona 10% no desconto
+else:
+    if dia == "quarta-feira":
+        preco = preco * 0.80  # Adiciona 20% no desconto
+
+print(f"O valor final do ingresso é: R$ {preco:.2f}")
+```
+
+Você pode testar aí
+
+### Exemplo 4:
+Hora do almoço

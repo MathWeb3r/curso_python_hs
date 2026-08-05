@@ -1,0 +1,73 @@
+<!-- The content below will be included at the end of the <head> element. -->
+<script type="text/javascript">
+  function applyVSCodeIndentGuides() {
+    const codeBlocks = document.querySelectorAll('pre.indent code, pre[class*="language-"].indent code');
+    codeBlocks.forEach(function (block) {
+      if (block.classList.contains('indent-processed')) return;
+      block.classList.add('indent-processed');
+
+      const lines = block.innerHTML.split('\n');
+      const lineData = [];
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const match = line.match(/^([ \t]+)/);
+        let spaceCount = 0;
+        if (match) {
+          for (let char of match[1]) {
+            spaceCount += (char === '\t' ? 4 : 1);
+          }
+        }
+        const textOnly = line.replace(/<[^>]*>/g, '').trim();
+        lineData.push({
+          html: line,
+          depth: Math.floor(spaceCount / 4),
+          isBlank: textOnly === ''
+        });
+      }
+
+      const processedLines = [];
+      for (let i = 0; i < lineData.length; i++) {
+        let prevDepth = 0;
+        for (let p = i - 1; p >= 0; p--) {
+          if (!lineData[p].isBlank) { prevDepth = lineData[p].depth; break; }
+        }
+        let nextDepth = 0;
+        for (let n = i + 1; n < lineData.length; n++) {
+          if (!lineData[n].isBlank) { nextDepth = lineData[n].depth; break; }
+        }
+
+        const item = lineData[i];
+        let depth = item.depth;
+        if (item.isBlank && depth === 0) {
+          depth = Math.min(prevDepth, nextDepth);
+        }
+
+        if (depth > 0) {
+          const leadingMatch = item.html.match(/^([ \t]+)/);
+          const rest = leadingMatch ? item.html.slice(leadingMatch[1].length) : item.html;
+          let guidesHtml = '';
+          for (let d = 0; d < depth; d++) {
+            guidesHtml += '<span class="indent-guide" data-level="' + (d + 1) + '">    </span>';
+          }
+          processedLines.push(guidesHtml + rest);
+        } else {
+          processedLines.push(item.html);
+        }
+      }
+
+      block.innerHTML = processedLines.join('\n');
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    applyVSCodeIndentGuides();
+
+    const observer = new MutationObserver(function () {
+      applyVSCodeIndentGuides();
+    });
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+  });
+</script>
